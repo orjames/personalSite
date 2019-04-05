@@ -1,55 +1,240 @@
+@font-face {
+  font-family: 'Apocalypse';
+  src: local('Apocalypse'), url(./fonts/Apocalypse.ttf) format('ttf');
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: rgba(223, 191, 224, 0.8);
-  background-color: rgba(49, 49, 49, 0.8);
+  height: 100%;
+}
+
+a {
+  color: rgb(204, 185, 185);
+}
+
+.chosen {
+  background-color: rgba(252, 252, 252, 0.2);
+  color: red;
+}
+
+.pageTitle {
+  /* border: 3px solid maroon; */
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-    
-}
-
-.App {
   text-align: center;
-  color: rgb(243, 176, 226);
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bodyDiv {
+  /* border: 3px solid orange; */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+}
+.horizontalNav {
+  /* border: 3px solid darkblue; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+.searchBarDiv {
+  /* border: 3px solid cornflowerblue; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.searchResultsDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+.categoryNavItem {
+  color: navy;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 1rem;
+}
+.postingsDiv {
+  /* border: 3px solid black; */
+  display: flex;
+  background-color: #2d2b2b;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.postingCard {
+  border: 3px solid gray;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.postingBody {
+  /* border: 3px solid yellow; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  text-align: left;
+}
+.createPostingOuterDiv {
+  /* border: 3px solid brown; */
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.createPostingDiv {
+  /* border: 3px solid teal; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis: auto;
+  /* justify-content: center; */
+  width: 45rem;
+  margin: 30px;
+}
+.createPostingButtonDiv {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.homeButtonDiv {
+  border-radius: 0.3rem;
+  /* border: 2px solid rgb(183, 39, 14); */
+  padding: 0.5rem;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.postingButtonsDiv {
+  /* border: 3px solid olivedrab; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.postingsDivShow {
+  display: flex;
+  background-color: #2d2b2b;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.postingShowDiv {
+  /* border: 3px solid olivedrab; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.subPostingShowDiv {
+  /* border: 3px solid olivedrab; */
+  display: inline-block;
+}
+
+button {
+  border-radius: 1em;
+  background-color: rgb(183, 39, 14);
+  padding: 0.5em;
+  color: white;
+  margin: 0.5em 0em;
+  /* border: 1px solid gray; */
+}
+
+button {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #4caf50; /* Green */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+a:hover {
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.showPostingCard {
+  border: 3px solid gray;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin: 0;
+  padding: 1rem;
+}
+
+.showPostingTitleDiv {
+  /* border: 1px solid gray; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.showPostingTitle {
+  font-size: 1.5em;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.showPostingBody {
+  margin: 0;
+  padding: 0em 0.2em;
+}
+
+.available {
+  color: white;
+  background-color: rgb(33, 116, 8);
+  border-radius: 0.2em;
+  padding: 0 0.2em;
+}
+
+.descriptionDiv {
+  width: 330px;
+  margin: 0;
+  padding: 0;
+}
+
+.postingImageShow {
+  width: 350px;
+  text-align: center;
+}
+
+.postingButtonsDivShow {
+  /* border: 3px solid olivedrab; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
+}
+
+.imageUpload {
+  width: 350px;
+  height: 350px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
