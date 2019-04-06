@@ -1,0 +1,47 @@
+.projects-div {
+  border: 3px solid black;
+  display: flex;
+  background-color: rgb(6, 47, 79);
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+.project-card {
+  border: 3px solid gray;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 70%;
+}
+
+.project-image {
+  display: inline-block;
+  border: 3px solid wheat;
+}
+
+.project-body {
+  border: 3px solid yellow;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-grow: 2;
+  width: 60%;
+  text-align: left;
+  padding: 0.5rem;
+}
+
+.project-buttons-div {
+  border: 3px solid olivedrab;
+}
+
+.project-name {
+  font-size: 2rem;
+}
+
+.project-description {
+}

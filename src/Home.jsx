@@ -1,52 +1,49 @@
 import React, { Component } from 'react';
-import Postings from './Postings';
-import Categories from './Categories';
-import SearchBar from './SearchBar';
+import Projects from './Projects';
+import Names from './Names';
+import Skills from './Skills';
 import './Home.css';
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      chosenCategory: '',
+      chosenName: '',
     };
-    this.selectCategory = this.selectCategory.bind(this);
+    // this.selectName = this.selectName.bind(this);
   }
 
-  selectCategory = (e) => {
-    this.setState({
-      chosenCategory: e.target.getAttribute('value'),
-    });
-    this.props.searchPostings(e.target.getAttribute('value'));
-  };
+  // selectName = (e) => {
+  //   this.setState({
+  //     chosenName: e.target.getAttribute('value'),
+  //   });
+  //   this.props.searchProjects(e.target.getAttribute('value'));
+  // };
 
   render() {
     return (
       <div className='home'>
-        <div className='pageTitle'>
-          <h1 className='ApocalistHeader'>Owen R. James</h1>
+        <div className='page-title'>
+          <h1 className='home-header'>
+            Owen R. James
+            <br />
+            <span className='home-sub-header'>Software Engineer</span>
+          </h1>
         </div>
-        <div className='searchBarDiv'>
-          <SearchBar
-            postings={this.props.postings}
-            filterValue={this.props.filterValue}
-            handleFilterChange={this.props.handleFilterChange}
+        <div>
+          <Names
+            names={this.props.names}
+            selectName={this.selectName}
+            chosenName={this.state.chosenName}
             {...this.props}
           />
         </div>
-        <div className='horizontalNav'>
-          <Categories
-            categories={this.props.categories}
-            selectCategory={this.selectCategory}
-            chosenCategory={this.state.chosenCategory}
-            {...this.props}
-          />
-        </div>
-        <Postings
-          postings={this.props.postings}
-          categoryBeenSelected={this.props.categoryBeenSelected}
+        <Projects
+          projects={this.props.projects}
+          nameBeenSelected={this.props.nameBeenSelected}
           {...this.props}
         />
+        <Skills />
       </div>
     );
   }
