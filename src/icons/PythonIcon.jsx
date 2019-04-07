@@ -5,13 +5,12 @@ const PythonIcon = ({
   fill = '#fff',
   width = '100%',
   className = '',
-  height = '100%',
   viewBox = '0 0 512 512',
 }) => (
   <svg
     width={width}
     style={style}
-    height={height}
+    height={width}
     viewBox={viewBox}
     className={`svg-icon ${className || ''}`}
     xmlns='http://www.w3.org/2000/svg'

@@ -6,9 +6,9 @@ import Projects from './Projects';
 import BottomBar from './BottomBar';
 //Components we put into our render
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import CSS3Icon from './icons/CSS3Icon';
+import ResumeIcon from './icons/ResumeIcon';
+import EmailIcon from './icons/EmailIcon';
 
 const names = [
   'intejump',
@@ -134,12 +134,24 @@ class App extends Component {
       <Router>
         <div className='app'>
           <div className='contact-button-div'>
-            <Link to='/contact'>
-              <button>
-                <FontAwesomeIcon icon={faPlus} size='1x' color='#ffffff' />{' '}
-                Contact
-              </button>
-            </Link>
+            <a href='#' className='home-link'>
+              <EmailIcon
+                fill='#fff'
+                width={14}
+                className=''
+                style={{ marginRight: '0.5rem' }}
+              />
+              Contact
+            </a>
+            <a href='#' className='home-link'>
+              <ResumeIcon
+                fill='#fff'
+                width={14}
+                className=''
+                style={{ marginRight: '0.4rem', marginLeft: '0.1rem' }}
+              />
+              Resume
+            </a>
           </div>
           <div>
             <BottomBar />

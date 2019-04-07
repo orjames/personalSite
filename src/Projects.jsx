@@ -1,6 +1,7 @@
 import React from 'react';
 import './Projects.css';
-import CSS3Icon from './icons/CSS3Icon';
+import LinkIcon from './icons/LinkIcon';
+import GithubIcon from './icons/GithubIcon';
 
 const Projects = (props) => {
   if (props.nameBeenSelected === false) {
@@ -13,16 +14,26 @@ const Projects = (props) => {
           <div className='project-body'>
             <span className='project-name'>{project.name}</span>
             <span className='project-description'>{project.description}</span>
-            <div>
-              {project.technologiesUsed}
-              {/* <CSS3Icon
-                fill='red'
-                width={350}
-                style={{ background: '', padding: '16px' }}
-              /> */}
-            </div>
+            <div>{project.technologiesUsed}</div>
             <div className='project-buttons-div'>
-              <button>Live link</button>
+              <a href='#' className=''>
+                <LinkIcon
+                  fill='#fff'
+                  width={14}
+                  className=''
+                  style={{ marginRight: '0.3rem' }}
+                />
+                Live-Link
+              </a>
+              <a href='#' className=''>
+                <GithubIcon
+                  fill='#fff'
+                  width={14}
+                  className=''
+                  style={{ marginRight: '0.3rem', marginLeft: '1rem' }}
+                />
+                Github
+              </a>
             </div>
           </div>
         </div>

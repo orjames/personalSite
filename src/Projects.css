@@ -1,7 +1,17 @@
+@font-face {
+  font-family: 'Alcubierre';
+  src: local('Alcubierre'), url(./fonts/Alcubierre.otf) format('truetype');
+}
+@font-face {
+  font-family: 'Pangram-ExtraLight';
+  src: local('Pangram-ExtraLight'),
+    url(./fonts/Pangram-ExtraLight.otf) format('truetype');
+}
+
 .projects-div {
-  border: 3px solid black;
+  /* border: 3px solid black; */
   display: flex;
-  background-color: rgb(6, 47, 79);
+  background-color: rgba(4, 10, 14, 0.9);
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -41,6 +51,9 @@
 
 .project-name {
   font-size: 2rem;
+  font-family: Pangram-ExtraLight;
+  letter-spacing: 0.15rem;
+  font-variant: small-caps;
 }
 
 .project-description {
