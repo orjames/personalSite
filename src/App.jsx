@@ -3,6 +3,7 @@ import './App.css';
 import Home from './Home';
 import Contact from './Contact';
 import Projects from './Projects';
+import Resume from './Resume';
 import BottomBar from './BottomBar';
 //Components we put into our render
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
@@ -201,6 +202,18 @@ class App extends Component {
                 projects={projects}
                 nameBeenSelected={nameBeenSelected}
                 displayedProjects={displayedProjects}
+                {...props}
+              />
+            )}
+          />
+          <Route
+            path='/resume/'
+            exact
+            render={(props) => (
+              <Resume
+                // projects={projects}
+                // nameBeenSelected={nameBeenSelected}
+                // displayedProjects={displayedProjects}
                 {...props}
               />
             )}
