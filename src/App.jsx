@@ -166,7 +166,7 @@ class App extends Component {
               />
               Contact
             </a>
-            <a href='#' className='home-link'>
+            <Link to='/resume/' className='home-link'>
               <ResumeIcon
                 fill='#fff'
                 width={14}
@@ -174,7 +174,7 @@ class App extends Component {
                 style={{ marginRight: '0.4rem', marginLeft: '0.1rem' }}
               />
               Resume
-            </a>
+            </Link>
           </div>
           <div>
             <BottomBar />

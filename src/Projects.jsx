@@ -2,7 +2,6 @@ import React from 'react';
 import './Projects.css';
 import LinkIcon from './icons/LinkIcon';
 import GithubIcon from './icons/GithubIcon';
-import Intejump from './images/intejump.jpg';
 
 const Projects = (props) => {
   if (props.nameBeenSelected === false) {
