@@ -2,6 +2,7 @@ import React from 'react';
 import './Projects.css';
 import LinkIcon from './icons/LinkIcon';
 import GithubIcon from './icons/GithubIcon';
+import Intejump from './images/intejump.jpg';
 
 const Projects = (props) => {
   if (props.nameBeenSelected === false) {
@@ -9,12 +10,26 @@ const Projects = (props) => {
       return (
         <div key={index} className='project-card'>
           <div>
-            <img src={project.imgUrl} alt='project' className='project-image' />
+            <img
+              src={Intejump}
+              alt='project'
+              className='project-image'
+              width='250px'
+            />
+            <img src={require(`./images/${project.imgUrl}`)} alt='' />
           </div>
           <div className='project-body'>
             <span className='project-name'>{project.name}</span>
-            <span className='project-description'>{project.description}</span>
-            <div>{project.technologiesUsed}</div>
+            <span className='project-description'>
+              {project.description}
+              {project.imgUrl}
+            </span>
+
+            <div className='icon-div'>
+              Technologies Used:
+              <br />
+              {project.technologiesUsed}
+            </div>
             <div className='project-buttons-div'>
               <a href='#' className=''>
                 <LinkIcon

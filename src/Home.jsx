@@ -84,6 +84,7 @@ class Home extends Component {
             {...this.props}
           />
         </div> */}
+        <div className='projects-title-div'>projects</div>
         <Projects
           projects={this.props.projects}
           nameBeenSelected={this.props.nameBeenSelected}

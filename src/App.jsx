@@ -9,6 +9,8 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import CSS3Icon from './icons/CSS3Icon';
 import ResumeIcon from './icons/ResumeIcon';
 import EmailIcon from './icons/EmailIcon';
+import HTMLIcon from './icons/HTMLIcon';
+import JSIcon from './icons/JSIcon';
 
 const names = [
   'intejump',
@@ -23,11 +25,12 @@ const projects = [
     id: 1,
     name: 'intejump',
     description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, voluptatem debitis veniam veritatis, laudantium cupiditate fuga possimus quisquam velit soluta fugiat. Inventore ea officia aspernatur itaque nisi. Minima, laborum corporis?',
-    imgUrl: 'https://loremflickr.com/320/240',
+      'Intejump is a static html, css, and javascript based app. The game uses logic to create a board of combinations to either single or double jump to the next slot. The cumulative score is shown, and the goal is to reach the next block by landing on the right slots to sum to the next safe block.',
+    imgUrl: '',
     technologiesUsed: [
-      <CSS3Icon fill='red' width={40} style={{ background: '' }} />,
-      <CSS3Icon fill='orange' width={40} style={{ background: '' }} />,
+      <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
+      <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
+      <JSIcon fill='white' width={40} style={{ background: '' }} />,
     ],
     liveLink: '',
     githubLink: '',
@@ -37,19 +40,27 @@ const projects = [
     id: 2,
     name: 'nextbook',
     description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, voluptatem debitis veniam veritatis, laudantium cupiditate fuga possimus quisquam velit soluta fugiat. Inventore ea officia aspernatur itaque nisi. Minima, laborum corporis?',
-    imgUrl: 'https://loremflickr.com/320/240',
-    technologiesUsed: '',
+      "Nextbook is a full-stack app using Postgres (PSQL), Express, Node.js, and EJS. It reccommends users their next book - based on a users selected genres, and books that they've read and rated in the app. The app uses 20 full crud routes, and two foreign API's.",
+    imgUrl: '',
+    technologiesUsed: [
+      <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
+      <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
+      <JSIcon fill='white' width={40} style={{ background: '' }} />,
+    ],
     liveLink: '',
     githubLink: '',
   },
   {
     id: 3,
     description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, voluptatem debitis veniam veritatis, laudantium cupiditate fuga possimus quisquam velit soluta fugiat. Inventore ea officia aspernatur itaque nisi. Minima, laborum corporis?',
+      'Nextbite is a full-stack app using the MERN stack (MongoDB with Mongoose, Express, React, and Node.js). The app allows users to browse thier feed for photos of food from local restaurants for what looks good for their next bite. Restaurants pay to post deals and photos.',
     name: 'nextbite',
-    imgUrl: 'https://loremflickr.com/320/240',
-    technologiesUsed: '',
+    imgUrl: '',
+    technologiesUsed: [
+      <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
+      <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
+      <JSIcon fill='white' width={40} style={{ background: '' }} />,
+    ],
     liveLink: '',
     githubLink: '',
   },
@@ -57,21 +68,28 @@ const projects = [
   {
     id: 4,
     description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, voluptatem debitis veniam veritatis, laudantium cupiditate fuga possimus quisquam velit soluta fugiat. Inventore ea officia aspernatur itaque nisi. Minima, laborum corporis?',
+      "Complement is a full-stack MERN app (MongoDB with Mongoose, Express, React, and Node.js). It uses full CRUD routes, and three foreign API's. The app allows the user to upload a photo, then it analyzes the photo to pick out the predominant colors, and displays complementary colors. The app can help pick out accents for interior design, website design, or outfit choices.",
     name: 'complement',
-    imgUrl: 'https://loremflickr.com/320/240',
-    technologiesUsed: '',
+    imgUrl: '',
+    technologiesUsed: [
+      <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
+      <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
+      <JSIcon fill='white' width={40} style={{ background: '' }} />,
+    ],
     liveLink: '',
     githubLink: '',
   },
 
   {
     id: 5,
-    description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, voluptatem debitis veniam veritatis, laudantium cupiditate fuga possimus quisquam velit soluta fugiat. Inventore ea officia aspernatur itaque nisi. Minima, laborum corporis?',
+    description: 'Portfolio showcasing projects completed, ',
     name: 'personal website',
-    imgUrl: 'https://loremflickr.com/320/240',
-    technologiesUsed: '',
+    imgUrl: '',
+    technologiesUsed: [
+      <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
+      <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
+      <JSIcon fill='white' width={40} style={{ background: '' }} />,
+    ],
     liveLink: '',
     githubLink: '',
   },
@@ -81,8 +99,12 @@ const projects = [
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, voluptatem debitis veniam veritatis, laudantium cupiditate fuga possimus quisquam velit soluta fugiat. Inventore ea officia aspernatur itaque nisi. Minima, laborum corporis?',
     name: 'apocalist',
-    imgUrl: 'https://loremflickr.com/320/240',
-    technologiesUsed: '',
+    imgUrl: '',
+    technologiesUsed: [
+      <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
+      <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
+      <JSIcon fill='white' width={40} style={{ background: '' }} />,
+    ],
     liveLink: '',
     githubLink: '',
   },
@@ -157,7 +179,7 @@ class App extends Component {
             <BottomBar />
           </div>
           <Route
-            path='/home'
+            path='/'
             exact
             render={(props) => (
               <Home

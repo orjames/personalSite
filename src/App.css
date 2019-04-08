@@ -52,6 +52,7 @@ button:hover {
   left: 1rem;
   display: flex;
   flex-direction: column;
+  /* background-color: rgba(252, 252, 252, 0.4); */
 }
 
 /* Icons -------------------- */
