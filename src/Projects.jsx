@@ -11,12 +11,11 @@ const Projects = (props) => {
         <div key={index} className='project-card'>
           <div>
             <img
-              src={Intejump}
+              src={require(`./images/${project.imgUrl}`)}
               alt='project'
               className='project-image'
               width='250px'
             />
-            <img src={require(`./images/${project.imgUrl}`)} alt='' />
           </div>
           <div className='project-body'>
             <span className='project-name'>{project.name}</span>

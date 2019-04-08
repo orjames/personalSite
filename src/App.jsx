@@ -26,7 +26,7 @@ const projects = [
     name: 'intejump',
     description:
       'Intejump is a static html, css, and javascript based app. The game uses logic to create a board of combinations to either single or double jump to the next slot. The cumulative score is shown, and the goal is to reach the next block by landing on the right slots to sum to the next safe block.',
-    imgUrl: '',
+    imgUrl: 'intejump.jpg',
     technologiesUsed: [
       <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
       <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
@@ -41,7 +41,7 @@ const projects = [
     name: 'nextbook',
     description:
       "Nextbook is a full-stack app using Postgres (PSQL), Express, Node.js, and EJS. It reccommends users their next book - based on a users selected genres, and books that they've read and rated in the app. The app uses 20 full crud routes, and two foreign API's.",
-    imgUrl: '',
+    imgUrl: 'intejump.jpg',
     technologiesUsed: [
       <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
       <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
@@ -55,7 +55,7 @@ const projects = [
     description:
       'Nextbite is a full-stack app using the MERN stack (MongoDB with Mongoose, Express, React, and Node.js). The app allows users to browse thier feed for photos of food from local restaurants for what looks good for their next bite. Restaurants pay to post deals and photos.',
     name: 'nextbite',
-    imgUrl: '',
+    imgUrl: 'intejump.jpg',
     technologiesUsed: [
       <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
       <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
@@ -70,7 +70,7 @@ const projects = [
     description:
       "Complement is a full-stack MERN app (MongoDB with Mongoose, Express, React, and Node.js). It uses full CRUD routes, and three foreign API's. The app allows the user to upload a photo, then it analyzes the photo to pick out the predominant colors, and displays complementary colors. The app can help pick out accents for interior design, website design, or outfit choices.",
     name: 'complement',
-    imgUrl: '',
+    imgUrl: 'intejump.jpg',
     technologiesUsed: [
       <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
       <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
@@ -84,7 +84,7 @@ const projects = [
     id: 5,
     description: 'Portfolio showcasing projects completed, ',
     name: 'personal website',
-    imgUrl: '',
+    imgUrl: 'intejump.jpg',
     technologiesUsed: [
       <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
       <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
@@ -99,7 +99,7 @@ const projects = [
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, voluptatem debitis veniam veritatis, laudantium cupiditate fuga possimus quisquam velit soluta fugiat. Inventore ea officia aspernatur itaque nisi. Minima, laborum corporis?',
     name: 'apocalist',
-    imgUrl: '',
+    imgUrl: 'intejump.jpg',
     technologiesUsed: [
       <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
       <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
