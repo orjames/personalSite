@@ -18,10 +18,7 @@ const Projects = (props) => {
           </div>
           <div className='project-body'>
             <span className='project-name'>{project.name}</span>
-            <span className='project-description'>
-              {project.description}
-              {project.imgUrl}
-            </span>
+            <span className='project-description'>{project.description}</span>
 
             <div className='icon-div'>
               Technologies Used:

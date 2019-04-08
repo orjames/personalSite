@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Projects from './Projects';
-import Names from './Names';
 import Skills from './Skills';
 import './Home.css';
-import OwenPhoto from './images/Owen-City.jpg';
 import GithubIcon from './icons/GithubIcon';
 import LinkedinIcon from './icons/LinkedinIcon';
 import InstagramIcon from './icons/InstagramIcon';
