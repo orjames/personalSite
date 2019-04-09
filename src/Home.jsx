@@ -7,6 +7,7 @@ import LinkedinIcon from './icons/LinkedinIcon';
 import InstagramIcon from './icons/InstagramIcon';
 import DownIcon from './icons/DownIcon';
 import Resume from './Resume';
+import CloseButton from './CloseButton';
 
 class Home extends Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class Home extends Component {
   render() {
     let resume = null;
     if (this.props.resumeBeenSelected) {
+      closeButton = <CloseButton closeResume={this.props.closeResume} />;
       resume = <Resume />;
     } else {
       resume = null;
