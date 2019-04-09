@@ -32,11 +32,12 @@ class Home extends Component {
             <div className='home-sub-header'>Software Engineer</div>
             {/* <img src={OwenPhoto} alt='Owen-Photo' className='home-image' /> */}
             <div className='home-bio'>
-              Full-Stack Software Engineer. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Pariatur voluptate similique
-              voluptatum perferendis, consequatur incidunt. Incidunt, nisi eius
-              vero tenetur cumque quae, harum quo veritatis blanditiis dolorum,
-              quos quasi praesentium?
+              Full-Stack Software Engineer. I have both front-end as well as
+              back-end knowledge and am comfortable working on all tiers of app
+              development. I earned a BS from Cal Poly and MS from UC Berkeley.
+              When not geeking out, I enjoy spending time with dogs and
+              exploring the Bay Area. Please, scroll down to see my projects and
+              skills!
             </div>
             <div className='home-icon-div'>
               <a href='#' className='home-link'>

@@ -84,7 +84,7 @@ const projects = [
   {
     id: 5,
     description:
-      'Portfolio showcasing projects completed, skills, and technologies familiar with.',
+      'Portfolio showcasing projects completed, skills, a resume, and technologies familiar with. Built in React.',
     name: 'personal website',
     imgUrl: 'intejump.jpg',
     technologiesUsed: [
@@ -99,7 +99,7 @@ const projects = [
   {
     id: 5,
     description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, voluptatem debitis veniam veritatis, laudantium cupiditate fuga possimus quisquam velit soluta fugiat. Inventore ea officia aspernatur itaque nisi. Minima, laborum corporis?',
+      'A themed hackathon project set in the dystopian future where the robot apocalypse happened. How will people obtain goods and services once the apocalypse has happened? You guess it! Apocalist. Craigslist for the nightmarish future.',
     name: 'apocalist',
     imgUrl: 'intejump.jpg',
     technologiesUsed: [
@@ -146,6 +146,8 @@ class App extends Component {
   //     nameBeenSelected: true,
   //   });
   // };
+
+  displayResume = () => {};
 
   render() {
     const projects = this.state.projects;
