@@ -76,7 +76,7 @@ const projects = [
   {
     id: 5,
     description:
-      'Portfolio showcasing projects completed, skills, a resume, and technologies familiar with. Built in React.',
+      "If you're reading this, this is this. Portfolio showcasing projects completed, skills, a resume, and technologies familiar with. Built in React.",
     name: 'personal website',
     imgUrl: 'intejump.jpg',
     technologiesUsed: [

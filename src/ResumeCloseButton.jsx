@@ -2,8 +2,9 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import './CloseButton.css';
+import Resume from './Resume';
 
-export default (props) =>
+const ResumeCloseButton = (props) =>
   props.images.map((image, i) => (
     <div key={i} className='fadein'>
       <div
@@ -12,5 +13,10 @@ export default (props) =>
       >
         <FontAwesomeIcon icon={faTimesCircle} size='2x' />
       </div>
+      <div>
+        <Resume />
+      </div>
     </div>
   ));
+
+export default ResumeCloseButton;
