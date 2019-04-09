@@ -25,7 +25,7 @@ const projects = [
     id: 1,
     name: 'intejump',
     description:
-      'Intejump is a static html, css, and javascript based app. The game uses logic to create a board of combinations to either single or double jump to the next slot. The cumulative score is shown, and the goal is to reach the next block by landing on the right slots to sum to the next safe block.',
+      'Intejump, a portmanteau of integer and jump, is a static html, css, and javascript based app. The game uses logic to create a board of combinations to either single or double jump to the next slot. The cumulative score is shown, and the goal is to reach the next block by landing on the right slots to sum to the next safe block.',
     imgUrl: 'intejump.jpg',
     technologiesUsed: [
       <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
@@ -40,7 +40,7 @@ const projects = [
     id: 2,
     name: 'nextbook',
     description:
-      "Nextbook is a full-stack app using Postgres (PSQL), Express, Node.js, and EJS. It reccommends users their next book - based on a users selected genres, and books that they've read and rated in the app. The app uses 20 full crud routes, and two foreign API's.",
+      "Me: 'I want a practical experience using SQL.' Also me: 'What book should I read next?' Enter Nextbook. Nextbook is a full-stack app using Postgres (PSQL), Express, Node.js, and EJS. It reccommends users their next book - based on a users selected genres, and books that they've read and rated in the app. The app uses 20 full crud routes, and two foreign API's.",
     imgUrl: 'intejump.jpg',
     technologiesUsed: [
       <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
@@ -53,7 +53,7 @@ const projects = [
   {
     id: 3,
     description:
-      'Nextbite is a full-stack app using the MERN stack (MongoDB with Mongoose, Express, React, and Node.js). The app allows users to browse thier feed for photos of food from local restaurants for what looks good for their next bite. Restaurants pay to post deals and photos.',
+      "Have you ever been in a situation where you know you want to get dinner but have no idea where you want to go? Your friend offers up a weak 'I'm good with anything.' Hunger and indecisiveness end here. Nextbite is a full-stack app using the MERN stack (MongoDB with Mongoose, Express, React, and Node.js). The app allows users to browse their feed for photos of food from local restaurants for what looks good for their next bite. Think Instagram for local eateries.",
     name: 'nextbite',
     imgUrl: 'intejump.jpg',
     technologiesUsed: [
@@ -68,7 +68,7 @@ const projects = [
   {
     id: 4,
     description:
-      "Complement is a full-stack MERN app (MongoDB with Mongoose, Express, React, and Node.js). It uses full CRUD routes, and three foreign API's. The app allows the user to upload a photo, then it analyzes the photo to pick out the predominant colors, and displays complementary colors. The app can help pick out accents for interior design, website design, or outfit choices.",
+      "Color complements which lead to many compliments. Complement is a full-stack MERN app (MongoDB with Mongoose, Express, React, and Node.js). It uses full CRUD routes, and three foreign API's. The app allows the user to upload a photo, then it analyzes the photo to pick out the predominant colors, and displays complementary colors. The app can help pick out accents for interior design, website design, or outfit choices.",
     name: 'complement',
     imgUrl: 'intejump.jpg',
     technologiesUsed: [
@@ -96,7 +96,7 @@ const projects = [
   },
 
   {
-    id: 5,
+    id: 6,
     description:
       'A themed hackathon project set in the dystopian future where the robot apocalypse happened. How will people obtain goods and services once the apocalypse has happened? You guess it! Apocalist. Craigslist for the nightmarish future.',
     name: 'apocalist',

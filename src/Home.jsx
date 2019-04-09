@@ -74,14 +74,6 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        {/* <div>
-          <Names
-            names={this.props.names}
-            selectName={this.selectName}
-            chosenName={this.state.chosenName}
-            {...this.props}
-          />
-        </div> */}
         <div className='projects-title-div'>projects</div>
         <Projects
           projects={this.props.projects}
