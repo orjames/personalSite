@@ -83,7 +83,8 @@ const projects = [
 
   {
     id: 5,
-    description: 'Portfolio showcasing projects completed, ',
+    description:
+      'Portfolio showcasing projects completed, skills, and technologies familiar with.',
     name: 'personal website',
     imgUrl: 'intejump.jpg',
     technologiesUsed: [

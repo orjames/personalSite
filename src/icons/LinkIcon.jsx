@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NodeJSIcon = ({
+const LinkIcon = ({
   style = {},
   fill = '#fff',
   width = '100%',
@@ -23,4 +23,4 @@ const NodeJSIcon = ({
   </svg>
 );
 
-export default NodeJSIcon;
+export default LinkIcon;
