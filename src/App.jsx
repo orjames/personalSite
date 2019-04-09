@@ -11,15 +11,8 @@ import ResumeIcon from './icons/ResumeIcon';
 import EmailIcon from './icons/EmailIcon';
 import HTMLIcon from './icons/HTMLIcon';
 import JSIcon from './icons/JSIcon';
+import Resume from './Resume';
 
-const names = [
-  'intejump',
-  'nextbook',
-  'complement',
-  'nextbite',
-  'personal website',
-  'apocalist',
-];
 const projects = [
   {
     id: 1,
@@ -166,6 +159,15 @@ class App extends Component {
           <div>
             <BottomBar />
           </div>
+          <div>
+            <Route
+              path='/resume/'
+              exact
+              render={(props) => (
+                <Resume closeResume={closeResume} {...props} />
+              )}
+            />
+          </div>
           <Route
             path='/'
             exact
@@ -183,13 +185,6 @@ class App extends Component {
             exact
             render={(props) => <Projects projects={projects} {...props} />}
           />
-          {/* <Route
-            path='/resume/'
-            exact
-            render={(props) => (
-              <ResumePage closeResume={closeResume} {...props} />
-            )}
-          /> */}
         </div>
       </Router>
     );
