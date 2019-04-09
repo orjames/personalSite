@@ -7,10 +7,7 @@ import Resume from './Resume';
 const ResumeCloseButton = (props) => {
   return (
     <div className='fadein'>
-      <div
-        onClick={() => props.removeImage(image.public_id)}
-        className='delete'
-      >
+      <div onClick={() => props.closeResume()} className='delete'>
         <FontAwesomeIcon icon={faTimesCircle} size='2x' />
         TESTING THIS OUT
       </div>
