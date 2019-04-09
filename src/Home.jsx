@@ -24,7 +24,6 @@ class Home extends Component {
 
     return (
       <div className='home'>
-        <div className='resume-div'>{resume}</div>
         <div className='page-title'>
           <div className='page-title-sub-div'>
             <div className='home-header'>Owen R. James</div>
@@ -74,6 +73,7 @@ class Home extends Component {
             </div>
           </div>
         </div>
+        <div className='resume-div'>{resume}</div>
         <div className='projects-title-div'>projects</div>
         <Projects
           projects={this.props.projects}

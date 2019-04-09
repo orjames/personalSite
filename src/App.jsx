@@ -160,13 +160,13 @@ class App extends Component {
             <BottomBar />
           </div>
           <div>
-            <Route
+            {/* <Route
               path='/resume/'
               exact
               render={(props) => (
                 <Resume closeResume={closeResume} {...props} />
               )}
-            />
+            /> */}
           </div>
           <Route
             path='/'
