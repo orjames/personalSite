@@ -2,20 +2,20 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import './CloseButton.css';
-import Resume from './Resume';
+import ContactModal from './ContactModal';
 
-const ResumeCloseButton = (props) => {
+const ContactModalClose = (props) => {
   return (
     <div className='fadein'>
       <div onClick={() => props.closeResume()} className='delete'>
         <FontAwesomeIcon icon={faTimesCircle} size='2x' />
       </div>
       <div>
-        <Resume />
+        <ContactModal />
         <span className='resume-close-link'>close</span>
       </div>
     </div>
   );
 };
 
-export default ResumeCloseButton;
+export default ContactModalClose;

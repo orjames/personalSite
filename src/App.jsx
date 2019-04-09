@@ -109,6 +109,7 @@ class App extends Component {
     super(props);
     this.state = {
       resumeBeenSelected: false,
+      modalBeenSelected: false,
       projects: projects,
     };
     this.displayResume = this.displayResume.bind(this);
@@ -124,6 +125,18 @@ class App extends Component {
   closeResume = () => {
     this.setState({
       resumeBeenSelected: false,
+    });
+  };
+
+  displayModal = () => {
+    this.setState({
+      modalBeenSelected: true,
+    });
+  };
+
+  closeModal = () => {
+    this.setState({
+      modalBeenSelected: false,
     });
   };
 
@@ -161,15 +174,6 @@ class App extends Component {
           <div>
             <BottomBar />
           </div>
-          <div>
-            {/* <Route
-              path='/resume/'
-              exact
-              render={(props) => (
-                <Resume closeResume={closeResume} {...props} />
-              )}
-            /> */}
-          </div>
           <Route
             path='/'
             exact
@@ -182,7 +186,6 @@ class App extends Component {
               />
             )}
           />
-          <Route path='/contact' component={Contact} />
           <Route
             path='/projects/'
             exact

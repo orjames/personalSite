@@ -131,4 +131,15 @@
 .resume-div {
   display: flex;
   justify-content: center;
+  text-align: center;
+}
+
+.contact-modal-div {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
 }

@@ -8,6 +8,7 @@ import InstagramIcon from './icons/InstagramIcon';
 import DownIcon from './icons/DownIcon';
 import Resume from './Resume';
 import ResumeCloseButton from './ResumeCloseButton';
+import ContactModalClose from './ContactModalClose';
 
 class Home extends Component {
   constructor(props) {
@@ -25,6 +26,9 @@ class Home extends Component {
 
     return (
       <div className='home'>
+        <div className='contact-modal-div'>
+          <ContactModalClose />
+        </div>
         <div className='page-title'>
           <div className='page-title-sub-div'>
             <div className='home-header'>Owen R. James</div>

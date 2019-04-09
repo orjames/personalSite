@@ -16,5 +16,12 @@
 }
 
 .resume-close-link {
-  font-size: 1rem;
+  font-family: Pangram-ExtraLight;
+  letter-spacing: 0.15rem;
+  cursor: pointer;
+}
+
+.resume-close-link:hover {
+  color: gray;
+  text-decoration: underline;
 }
