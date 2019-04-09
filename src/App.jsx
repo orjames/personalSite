@@ -177,6 +177,7 @@ class App extends Component {
               <Home
                 projects={projects}
                 resumeBeenSelected={resumeBeenSelected}
+                closeResume={closeResume}
                 {...props}
               />
             )}

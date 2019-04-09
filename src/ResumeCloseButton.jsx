@@ -9,7 +9,6 @@ const ResumeCloseButton = (props) => {
     <div className='fadein'>
       <div onClick={() => props.closeResume()} className='delete'>
         <FontAwesomeIcon icon={faTimesCircle} size='2x' />
-        TESTING THIS OUT
       </div>
       <div>
         <Resume />
