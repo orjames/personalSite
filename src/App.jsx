@@ -146,7 +146,8 @@ class App extends Component {
               />
               Contact
             </a>
-            <Link to='/resume/' className='home-link' onClick={displayResume}>
+            {/* <Link to='/resume/' className='home-link' onClick={displayResume}> */}
+            <a className='home-link' onClick={displayResume}>
               <ResumeIcon
                 fill='#fff'
                 width={14}
@@ -154,7 +155,8 @@ class App extends Component {
                 style={{ marginRight: '0.4rem', marginLeft: '0.1rem' }}
               />
               Resume
-            </Link>
+            </a>
+            {/* </Link> */}
           </div>
           <div>
             <BottomBar />
