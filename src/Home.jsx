@@ -19,10 +19,7 @@ class Home extends Component {
     let resume = null;
     let resumeCloseButton = null;
     if (this.props.resumeBeenSelected) {
-      resumeCloseButton = (
-        <ResumeCloseButton closeResume={this.props.closeResume} />
-      );
-      resume = <Resume />;
+      resume = <ResumeCloseButton closeResume={this.props.closeResume} />;
     } else {
       resume = null;
     }
