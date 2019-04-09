@@ -6,26 +6,25 @@ import GithubIcon from './icons/GithubIcon';
 import LinkedinIcon from './icons/LinkedinIcon';
 import InstagramIcon from './icons/InstagramIcon';
 import DownIcon from './icons/DownIcon';
+import Resume from './Resume';
 
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      chosenName: '',
-    };
-    // this.selectName = this.selectName.bind(this);
+    this.state = {};
   }
 
-  // selectName = (e) => {
-  //   this.setState({
-  //     chosenName: e.target.getAttribute('value'),
-  //   });
-  //   this.props.searchProjects(e.target.getAttribute('value'));
-  // };
-
   render() {
+    let resume = null;
+    if (this.props.resumeBeenSelected) {
+      resume = <Resume />;
+    } else {
+      resume = null;
+    }
+
     return (
       <div className='home'>
+        <div className='resume-div'>{resume}</div>
         <div className='page-title'>
           <div className='page-title-sub-div'>
             <div className='home-header'>Owen R. James</div>

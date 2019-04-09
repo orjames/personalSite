@@ -3,7 +3,6 @@ import './App.css';
 import Home from './Home';
 import Contact from './Contact';
 import Projects from './Projects';
-import Resume from './Resume';
 import BottomBar from './BottomBar';
 //Components we put into our render
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
@@ -48,8 +47,8 @@ const projects = [
       <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
       <JSIcon fill='white' width={40} style={{ background: '' }} />,
     ],
-    liveLink: '',
-    githubLink: '',
+    liveLink: 'https://orjames.github.io/gameproject/',
+    githubLink: 'https://github.com/orjames/gameproject',
   },
   {
     id: 3,
@@ -116,45 +115,30 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      resumeBeenSelected: false,
       projects: projects,
-      names: names,
-      displayedProjects: [],
-      nameBeenSelected: false,
     };
-    // this.searchProjects = this.searchProjects.bind(this);
+    this.displayResume = this.displayResume.bind(this);
+    this.closeResume = this.closeResume.bind(this);
   }
 
-  // searchProjects = (name) => {
-  //   let projects = this.state.projects;
-  //   let found = false;
-  //   let projectsInName = [];
-  //   console.log(name);
-  //   for (let i = 0; i < projects.length; i++) {
-  //     console.log(projects[i].name.toLowerCase());
-  //     console.log(name);
-  //     if (projects[i].name.toLowerCase() === name) {
-  //       found = true;
-  //       console.log('found');
-  //       if (found) {
-  //         projectsInName.push(projects[i]);
-  //         console.log('pushed to projectsInName');
-  //       }
-  //     }
-  //   }
-  //   this.setState({
-  //     displayedProjects: projectsInName,
-  //     nameBeenSelected: true,
-  //   });
-  // };
+  displayResume = () => {
+    this.setState({
+      resumeBeenSelected: true,
+    });
+  };
 
-  displayResume = () => {};
+  closeResume = () => {
+    this.setState({
+      resumeBeenSelected: false,
+    });
+  };
 
   render() {
     const projects = this.state.projects;
-    const names = this.state.names;
-    const searchProjects = this.searchProjects;
-    const displayedProjects = this.state.displayedProjects;
-    const nameBeenSelected = this.state.nameBeenSelected;
+    const displayResume = this.displayResume;
+    const closeResume = this.closeResume;
+    const resumeBeenSelected = this.state.resumeBeenSelected;
 
     return (
       <Router>
@@ -169,7 +153,7 @@ class App extends Component {
               />
               Contact
             </a>
-            <Link to='/resume/' className='home-link'>
+            <Link to='/resume/' className='home-link' onClick={displayResume}>
               <ResumeIcon
                 fill='#fff'
                 width={14}
@@ -188,10 +172,7 @@ class App extends Component {
             render={(props) => (
               <Home
                 projects={projects}
-                names={names}
-                searchProjects={searchProjects}
-                nameBeenSelected={nameBeenSelected}
-                displayedProjects={displayedProjects}
+                resumeBeenSelected={resumeBeenSelected}
                 {...props}
               />
             )}
@@ -200,27 +181,15 @@ class App extends Component {
           <Route
             path='/projects/'
             exact
-            render={(props) => (
-              <Projects
-                projects={projects}
-                nameBeenSelected={nameBeenSelected}
-                displayedProjects={displayedProjects}
-                {...props}
-              />
-            )}
+            render={(props) => <Projects projects={projects} {...props} />}
           />
-          <Route
+          {/* <Route
             path='/resume/'
             exact
             render={(props) => (
-              <Resume
-                // projects={projects}
-                // nameBeenSelected={nameBeenSelected}
-                // displayedProjects={displayedProjects}
-                {...props}
-              />
+              <ResumePage closeResume={closeResume} {...props} />
             )}
-          />
+          /> */}
         </div>
       </Router>
     );
