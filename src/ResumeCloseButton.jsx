@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
-import './CloseButton.css';
+import './ResumeCloseButton.css';
 import Resume from './Resume';
 
 const ResumeCloseButton = (props) => {
@@ -12,7 +12,7 @@ const ResumeCloseButton = (props) => {
       </div>
       <div>
         <Resume />
-        TESTING THIS OUT
+        <span className='resume-close-link'>close</span>
       </div>
     </div>
   );
