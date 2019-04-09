@@ -29,21 +29,23 @@ const Skills = (props) => {
         <div className='skills-div-list'>
           <div className='skills-div-list-item'>
             <HTMLIcon fill='white' width={40} style={{ background: '' }} />
-            <br />
             HTML5
           </div>
           <div className='skills-div-list-item'>
-            <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
+            <CSS3Icon fill='white' width={40} style={{ background: '' }} />
+            CSS3
           </div>
           <div className='skills-div-list-item'>
-            <JSIcon fill='white' width={40} style={{ background: '' }} />,
-          </div>
-
-          <div className='skills-div-list-item'>
-            <PythonIcon fill='white' width={40} style={{ background: '' }} />,
+            <JSIcon fill='white' width={40} style={{ background: '' }} />
+            JavaScript
           </div>
           <div className='skills-div-list-item'>
-            <SQLIcon fill='white' width={40} style={{ background: '' }} />,
+            <PythonIcon fill='white' width={40} style={{ background: '' }} />
+            Python
+          </div>
+          <div className='skills-div-list-item'>
+            <SQLIcon fill='white' width={40} style={{ background: '' }} />
+            SQL
           </div>
           <div className='skills-div-list-item'>
             <MaterializeIcon
@@ -51,35 +53,43 @@ const Skills = (props) => {
               width={40}
               style={{ background: '' }}
             />
+            Materialize
           </div>
           <div className='skills-div-list-item'>
             <MongoDBIcon fill='white' width={40} style={{ background: '' }} />{' '}
-            MongoDB,
+            MongoDB
           </div>
           <div className='skills-div-list-item'>
             <BootstrapIcon fill='white' width={40} style={{ background: '' }} />
-            ,
+            Bootstrap
           </div>
           <div className='skills-div-list-item'>
-            <ReactIcon fill='white' width={40} style={{ background: '' }} />,
+            <ReactIcon fill='white' width={40} style={{ background: '' }} />
+            React
           </div>
           <div className='skills-div-list-item'>
-            <NodeJSIcon fill='white' width={40} style={{ background: '' }} />,
+            <NodeJSIcon fill='white' width={40} style={{ background: '' }} />
+            Node.js
           </div>
           <div className='skills-div-list-item'>
-            <PostgresIcon fill='white' width={40} style={{ background: '' }} />e
+            <PostgresIcon fill='white' width={40} style={{ background: '' }} />
+            Postgres (PSQL)
           </div>
           <div className='skills-div-list-item'>
-            <MongooseIcon fill='white' width={40} style={{ background: '' }} />,
+            <MongooseIcon fill='white' width={40} style={{ background: '' }} />
+            Mongoose (ODM)
           </div>
           <div className='skills-div-list-item'>
             <GithubIcon fill='white' width={40} style={{ background: '' }} />
+            Github (Version Cntrl)
           </div>
           <div className='skills-div-list-item'>
             <SequelizeIcon fill='white' width={40} style={{ background: '' }} />
+            Sequelize
           </div>
           <div className='skills-div-list-item'>
             <DjangoIcon fill='white' width={40} style={{ background: '' }} />
+            Django
           </div>
         </div>
       </div>

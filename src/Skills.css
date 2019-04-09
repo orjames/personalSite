@@ -20,21 +20,22 @@
 .skills-div {
   width: 90%;
   max-width: 875px;
-  border: 4px solid tomato;
+  /* border: 4px solid tomato; */
   margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 }
 
 .skills-div-header {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+  margin: 0.5rem 0;
 }
 
 .skills-header {
@@ -48,7 +49,7 @@
 }
 
 .skills-div-list {
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -56,9 +57,13 @@
 }
 
 .skills-div-list-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   padding: 0.25rem;
   margin: 0.25rem;
-  border: 1px solid hotpink;
-  width: 24%;
-  min-width: 300px;
+  /* border: 1px solid hotpink; */
+  min-width: 150px;
 }
