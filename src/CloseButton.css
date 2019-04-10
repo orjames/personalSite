@@ -26,6 +26,13 @@
   text-decoration: underline;
 }
 
+.resume-inner-div {
+  border: 1px solid orange;
+  display: flex;
+  /* flex-direction: row;
+  justify-content: flex-start; */
+}
+
 .modal-inner-div {
   /* border: 1px solid orange; */
   display: flex;
