@@ -104,7 +104,7 @@ const projects = [
     description:
       "Have you ever been in a situation where you know you want to get dinner but have no idea where you want to go? Your friend offers up a weak 'I'm good with anything.' Hunger and indecisiveness end here. Nextbite is a full-stack app using the MERN stack (MongoDB with Mongoose, Express, React, and Node.js). The app allows users to browse their feed for photos of food from local restaurants for what looks good for their next bite. Think Instagram for local eateries.",
     name: 'nextbite',
-    imgUrl: 'intejump.jpg',
+    imgUrl: 'dogPlaceholder.jpg',
     technologiesUsed: [
       <div className='project-div-list-item'>
         <NodeJSIcon fill='white' width={40} style={{ background: '' }} />
