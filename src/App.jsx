@@ -234,6 +234,10 @@ const projects = [
         <CSS3Icon fill='white' width={40} style={{ background: '' }} />
         CSS3
       </div>,
+      <div className='project-div-list-item'>
+        <GithubIcon fill='white' width={40} style={{ background: '' }} />
+        Github (Version Cntrl)
+      </div>,
     ],
     liveLink: '',
     githubLink: 'https://github.com/orjames/apocalist',

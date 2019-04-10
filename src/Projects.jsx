@@ -4,23 +4,21 @@ import LinkIcon from './icons/LinkIcon';
 import GithubIcon from './icons/GithubIcon';
 
 const Projects = (props) => {
-  if (project.liveLink) {
-    liveLink = (
-      <a href={project.liveLink} className=''>
-        <LinkIcon
-          fill='#fff'
-          width={14}
-          className=''
-          style={{ marginRight: '0.3rem' }}
-        />
-        Live-Link
-      </a>
-    );
-  } else {
-    liveLink = null;
-  }
-
   let projects = props.projects.map((project, index) => {
+    let liveLink = null;
+    if (project.liveLink) {
+      liveLink = (
+        <a href={project.liveLink} className=''>
+          <LinkIcon
+            fill='#fff'
+            width={14}
+            className=''
+            style={{ marginRight: '0.3rem' }}
+          />
+          Live-Link
+        </a>
+      );
+    }
     return (
       <div key={index} className='project-card'>
         <div>
