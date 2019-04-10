@@ -179,8 +179,8 @@ const projects = [
         Github (Version Cntrl)
       </div>,
     ],
-    liveLink: '',
-    githubLink: '',
+    liveLink: 'https://orj-mern-project.herokuapp.com/',
+    githubLink: 'https://github.com/orjames/mernProject',
   },
 
   {
@@ -207,7 +207,7 @@ const projects = [
         CSS3
       </div>,
     ],
-    liveLink: 'orjames.com',
+    liveLink: 'www.orjames.com',
     githubLink: 'https://github.com/orjames/personalSite',
   },
 
