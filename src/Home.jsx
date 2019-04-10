@@ -6,7 +6,6 @@ import GithubIcon from './icons/GithubIcon';
 import LinkedinIcon from './icons/LinkedinIcon';
 import InstagramIcon from './icons/InstagramIcon';
 import DownIcon from './icons/DownIcon';
-import Resume from './Resume';
 import ResumeCloseButton from './ResumeCloseButton';
 import ContactModalClose from './ContactModalClose';
 
@@ -24,16 +23,30 @@ class Home extends Component {
       resume = null;
     }
 
+    let modal = null;
+    if (this.props.modalBeenSelected) {
+      modal = (
+        <div
+          className='contact-modal-div'
+          onClick={(e) => this.props.closeModal(e, 'contact-modal-div')}
+        >
+          <ContactModalClose
+            closeModal={this.props.closeModal}
+            handleChildClick={this.props.handleChildClick}
+          />
+        </div>
+      );
+    } else {
+      modal = null;
+    }
+
     return (
       <div className='home'>
-        <div className='contact-modal-div'>
-          <ContactModalClose />
-        </div>
+        <div>{modal}</div>
         <div className='page-title'>
           <div className='page-title-sub-div'>
             <div className='home-header'>Owen R. James</div>
             <div className='home-sub-header'>Software Engineer</div>
-            {/* <img src={OwenPhoto} alt='Owen-Photo' className='home-image' /> */}
             <div className='home-bio'>
               Full-Stack Software Engineer. I have both front-end as well as
               back-end knowledge and am comfortable working on all tiers of app

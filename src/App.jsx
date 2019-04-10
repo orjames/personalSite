@@ -114,6 +114,8 @@ class App extends Component {
     };
     this.displayResume = this.displayResume.bind(this);
     this.closeResume = this.closeResume.bind(this);
+    this.displayModal = this.displayModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   displayResume = () => {
@@ -134,23 +136,32 @@ class App extends Component {
     });
   };
 
-  closeModal = () => {
+  closeModal = (e, classPassed) => {
     this.setState({
       modalBeenSelected: false,
     });
+  };
+
+  handleChildClick = (e) => {
+    e.stopPropagation();
+    console.log('child');
   };
 
   render() {
     const projects = this.state.projects;
     const displayResume = this.displayResume;
     const closeResume = this.closeResume;
+    const displayModal = this.displayModal;
+    const closeModal = this.closeModal;
+    const modalBeenSelected = this.state.modalBeenSelected;
     const resumeBeenSelected = this.state.resumeBeenSelected;
+    const handleChildClick = this.handleChildClick;
 
     return (
       <Router>
         <div className='app'>
           <div className='contact-button-div'>
-            <a href='#' className='home-link'>
+            <button className='home-link' onClick={displayModal}>
               <EmailIcon
                 fill='#fff'
                 width={14}
@@ -158,9 +169,8 @@ class App extends Component {
                 style={{ marginRight: '0.5rem' }}
               />
               Contact
-            </a>
-            {/* <Link to='/resume/' className='home-link' onClick={displayResume}> */}
-            <a className='home-link' onClick={displayResume}>
+            </button>
+            <button className='home-link' onClick={displayResume}>
               <ResumeIcon
                 fill='#fff'
                 width={14}
@@ -168,8 +178,7 @@ class App extends Component {
                 style={{ marginRight: '0.4rem', marginLeft: '0.1rem' }}
               />
               Resume
-            </a>
-            {/* </Link> */}
+            </button>
           </div>
           <div>
             <BottomBar />
@@ -181,7 +190,10 @@ class App extends Component {
               <Home
                 projects={projects}
                 resumeBeenSelected={resumeBeenSelected}
+                modalBeenSelected={modalBeenSelected}
+                handleChildClick={handleChildClick}
                 closeResume={closeResume}
+                closeModal={closeModal}
                 {...props}
               />
             )}

@@ -1,18 +1,23 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import './CloseButton.css';
 import ContactModal from './ContactModal';
+import OwenPhoto from './images/Owen-City.jpg';
+import XIcon from './icons/XIcon';
 
 const ContactModalClose = (props) => {
   return (
-    <div className='fadein'>
-      <div onClick={() => props.closeResume()} className='delete'>
-        <FontAwesomeIcon icon={faTimesCircle} size='2x' />
+    <div
+      className='fadein modal-inner-div'
+      onClick={(e) => {
+        props.handleChildClick(e);
+      }}
+    >
+      <div onClick={() => props.closeModal()} className='delete'>
+        <XIcon width={35} />
       </div>
-      <div>
+      <div className='modal-inner-inner-div'>
+        <img src={OwenPhoto} alt='Owen R.' className='modal-image' />
         <ContactModal />
-        <span className='resume-close-link'>close</span>
       </div>
     </div>
   );

@@ -1,14 +1,13 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import './CloseButton.css';
 import Resume from './Resume';
+import XIcon from './icons/XIcon';
 
 const ResumeCloseButton = (props) => {
   return (
     <div className='fadein'>
       <div onClick={() => props.closeResume()} className='delete'>
-        <FontAwesomeIcon icon={faTimesCircle} size='2x' />
+        <XIcon width={35} />
       </div>
       <div>
         <Resume />

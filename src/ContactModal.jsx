@@ -1,22 +1,30 @@
 import React from 'react';
+import './CloseButton.css';
 
 const ContactModal = (props) => {
   return (
-    <form name='contact' netlify>
-      <p>
-        <label>
-          Name <input type='text' name='name' />
-        </label>
-      </p>
-      <p>
-        <label>
-          Email <input type='email' name='email' />
-        </label>
-      </p>
-      <p>
-        <button type='submit'>Send</button>
-      </p>
-    </form>
+    <div className='form-div'>
+      <div className='modal-title-div'>contact</div>
+      <form name='contact' netlify>
+        <div className='input-div'>
+          <label>Name: </label>
+          <input type='text' name='name' className='input' />
+        </div>
+        <div className='input-div'>
+          <label>Email: </label>
+          <input type='email' name='email' className='input' />
+        </div>
+        <div className='input-div'>
+          <label>Message: </label>
+          <textarea type='text' name='message' className='input' />
+        </div>
+        <div className='input-div'>
+          <button type='submit' class='btn btn-1 btn-1e'>
+            Send
+          </button>
+        </div>
+      </form>
+    </div>
   );
 };
 

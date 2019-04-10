@@ -16,7 +16,7 @@ const SequelizeIcon = ({
     xmlns='http://www.w3.org/2000/svg'
   >
     <g
-      stroke-width='.918202'
+      strokeWidth='.918202'
       transform='matrix(1.7872155 0 0 1.7872155 -4.661205 -21.616466)'
     >
       <path

@@ -22,12 +22,7 @@ a:hover {
 }
 
 button {
-  border-radius: 1rem;
-  background-color: rgb(183, 39, 14);
-  padding: 0.5rem;
-  color: white;
-  margin: 0.5rem 0rem;
-  /* border: 1px solid gray; */
+  padding: 0.25rem 1.5rem;
 }
 
 button {
@@ -36,13 +31,12 @@ button {
 }
 
 button:hover {
-  background-color: #4caf50; /* Green */
+  background-color: rgba(12, 11, 11, 0.2);
   color: white;
 }
 
 .chosen {
   background-color: rgba(252, 252, 252, 0.2);
-  color: red;
 }
 
 .contact-button-div {

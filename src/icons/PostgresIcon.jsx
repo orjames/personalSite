@@ -11,7 +11,6 @@ const PostgresIcon = ({
     width={width}
     style={style}
     height={width}
-    viewBox={viewBox}
     className={`svg-icon ${className || ''}`}
     xmlns='http://www.w3.org/1999/xlink'
     xlink='http://www.w3.org/1999/xlink'
