@@ -207,8 +207,8 @@ const projects = [
         CSS3
       </div>,
     ],
-    liveLink: '',
-    githubLink: '',
+    liveLink: 'orjames.com',
+    githubLink: 'https://github.com/orjames/personalSite',
   },
 
   {
@@ -216,7 +216,7 @@ const projects = [
     description:
       'A themed hackathon project set in the dystopian future where the robot apocalypse happened. How will people obtain goods and services once the apocalypse has happened? You guess it! Apocalist. Craigslist for the nightmarish future.',
     name: 'apocalist',
-    imgUrl: 'intejump.jpg',
+    imgUrl: 'apocalist0.png',
     technologiesUsed: [
       <div className='project-div-list-item'>
         <ReactIcon fill='white' width={40} style={{ background: '' }} />
