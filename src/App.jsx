@@ -236,7 +236,7 @@ const projects = [
       </div>,
     ],
     liveLink: '',
-    githubLink: '',
+    githubLink: 'https://github.com/orjames/apocalist',
   },
 ];
 
