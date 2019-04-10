@@ -15,7 +15,9 @@ const ResumeCloseButton = (props) => {
       </div>
       <div>
         <Resume />
-        <span className='resume-close-link'>close</span>
+        <span className='resume-close-link' onClick={() => props.closeResume()}>
+          close
+        </span>
       </div>
     </div>
   );

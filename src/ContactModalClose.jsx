@@ -12,10 +12,10 @@ const ContactModalClose = (props) => {
         props.handleChildClick(e);
       }}
     >
-      <div onClick={() => props.closeModal()} className='delete'>
-        <XIcon width={35} />
-      </div>
       <div className='modal-inner-inner-div'>
+        <div onClick={() => props.closeModal()} className='delete'>
+          <XIcon width={35} />
+        </div>
         <img src={OwenPhoto} alt='Owen R.' className='modal-image' />
         <ContactModal />
       </div>
