@@ -140,7 +140,7 @@ const projects = [
     description:
       "Color complements which lead to many compliments. Complement is a full-stack MERN app (MongoDB with Mongoose, Express, React, and Node.js). It uses full CRUD routes, and three foreign API's. The app allows the user to upload a photo, then it analyzes the photo to pick out the predominant colors, and displays complementary colors. The app can help pick out accents for interior design, website design, or outfit choices.",
     name: 'complement',
-    imgUrl: 'intejump.jpg',
+    imgUrl: 'complement0.jpg',
     technologiesUsed: [
       <div className='project-div-list-item'>
         <NodeJSIcon fill='white' width={40} style={{ background: '' }} />
