@@ -49,6 +49,18 @@ button:hover {
   /* background-color: rgba(252, 252, 252, 0.4); */
 }
 
+.project-div-list-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+  margin: 0.25rem;
+  /* border: 1px solid hotpink; */
+  min-width: 80px;
+}
+
 /* Icons -------------------- */
 
 .svg-icon path {

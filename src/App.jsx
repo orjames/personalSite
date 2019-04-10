@@ -9,6 +9,19 @@ import ResumeIcon from './icons/ResumeIcon';
 import EmailIcon from './icons/EmailIcon';
 import HTMLIcon from './icons/HTMLIcon';
 import JSIcon from './icons/JSIcon';
+import PythonIcon from './icons/PythonIcon';
+import SQLIcon from './icons/SQLIcon';
+import MaterializeIcon from './icons/MaterializeIcon';
+import MongoDBIcon from './icons/MongoDBIcon';
+import BootstrapIcon from './icons/BootstrapIcon';
+import ReactIcon from './icons/ReactIcon';
+import NodeJSIcon from './icons/NodeJSIcon';
+import MongooseIcon from './icons/MongooseIcon';
+import PostgresIcon from './icons/PostgresIcon';
+import GithubIcon from './icons/GithubIcon';
+import SequelizeIcon from './icons/SequelizeIcon';
+import DjangoIcon from './icons/DjangoIcon';
+import ExpressIcon from './icons/ExpressIcon';
 
 const projects = [
   {
@@ -18,9 +31,22 @@ const projects = [
       'Intejump, a portmanteau of integer and jump, is a static html, css, and javascript based app. The game uses logic to create a board of combinations to either single or double jump to the next slot. The cumulative score is shown, and the goal is to reach the next block by landing on the right slots to sum to the next safe block.',
     imgUrl: 'intejump.jpg',
     technologiesUsed: [
-      <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
-      <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
-      <JSIcon fill='white' width={40} style={{ background: '' }} />,
+      <div className='project-div-list-item'>
+        <JSIcon fill='white' width={40} style={{ background: '' }} />
+        JavaScript
+      </div>,
+      <div className='project-div-list-item'>
+        <HTMLIcon fill='white' width={40} style={{ background: '' }} />
+        HTML5
+      </div>,
+      <div className='project-div-list-item'>
+        <CSS3Icon fill='white' width={40} style={{ background: '' }} />
+        CSS3
+      </div>,
+      <div className='project-div-list-item'>
+        <MaterializeIcon fill='white' width={40} style={{ background: '' }} />
+        Materialize
+      </div>,
     ],
     liveLink: '',
     githubLink: '',
@@ -33,9 +59,42 @@ const projects = [
       "Me: 'I want a practical experience using SQL.' Also me: 'What book should I read next?' Enter Nextbook. Nextbook is a full-stack app using Postgres (PSQL), Express, Node.js, and EJS. It reccommends users their next book - based on a users selected genres, and books that they've read and rated in the app. The app uses 20 full crud routes, and two foreign API's.",
     imgUrl: 'intejump.jpg',
     technologiesUsed: [
-      <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
-      <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
-      <JSIcon fill='white' width={40} style={{ background: '' }} />,
+      <div className='project-div-list-item'>
+        <NodeJSIcon fill='white' width={40} style={{ background: '' }} />
+        Node.js
+      </div>,
+      <div className='project-div-list-item'>
+        <ExpressIcon fill='white' width={40} style={{ background: '' }} />
+        Express.js
+      </div>,
+      <div className='project-div-list-item'>
+        <SequelizeIcon fill='white' width={40} style={{ background: '' }} />
+        Sequelize
+      </div>,
+      <div className='project-div-list-item'>
+        <SQLIcon fill='white' width={40} style={{ background: '' }} />
+        SQL
+      </div>,
+      <div className='project-div-list-item'>
+        <PostgresIcon fill='white' width={40} style={{ background: '' }} />
+        Postgres (PSQL)
+      </div>,
+      <div className='project-div-list-item'>
+        <JSIcon fill='white' width={40} style={{ background: '' }} />
+        JavaScript
+      </div>,
+      <div className='project-div-list-item'>
+        <HTMLIcon fill='white' width={40} style={{ background: '' }} />
+        HTML5
+      </div>,
+      <div className='project-div-list-item'>
+        <BootstrapIcon fill='white' width={40} style={{ background: '' }} />
+        Bootstrap
+      </div>,
+      <div className='project-div-list-item'>
+        <CSS3Icon fill='white' width={40} style={{ background: '' }} />
+        CSS3
+      </div>,
     ],
     liveLink: 'https://orjames.github.io/gameproject/',
     githubLink: 'https://github.com/orjames/gameproject',
@@ -47,9 +106,30 @@ const projects = [
     name: 'nextbite',
     imgUrl: 'intejump.jpg',
     technologiesUsed: [
-      <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
-      <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
-      <JSIcon fill='white' width={40} style={{ background: '' }} />,
+      <div className='project-div-list-item'>
+        <NodeJSIcon fill='white' width={40} style={{ background: '' }} />
+        Node.js
+      </div>,
+      <div className='project-div-list-item'>
+        <ExpressIcon fill='white' width={40} style={{ background: '' }} />
+        Express.js
+      </div>,
+      <div className='project-div-list-item'>
+        <ReactIcon fill='white' width={40} style={{ background: '' }} />
+        React
+      </div>,
+      <div className='project-div-list-item'>
+        <JSIcon fill='white' width={40} style={{ background: '' }} />
+        JavaScript
+      </div>,
+      <div className='project-div-list-item'>
+        <HTMLIcon fill='white' width={40} style={{ background: '' }} />
+        HTML5
+      </div>,
+      <div className='project-div-list-item'>
+        <CSS3Icon fill='white' width={40} style={{ background: '' }} />
+        CSS3
+      </div>,
     ],
     liveLink: '',
     githubLink: '',
@@ -62,9 +142,42 @@ const projects = [
     name: 'complement',
     imgUrl: 'intejump.jpg',
     technologiesUsed: [
-      <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
-      <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
-      <JSIcon fill='white' width={40} style={{ background: '' }} />,
+      <div className='project-div-list-item'>
+        <NodeJSIcon fill='white' width={40} style={{ background: '' }} />
+        Node.js
+      </div>,
+      <div className='project-div-list-item'>
+        <ExpressIcon fill='white' width={40} style={{ background: '' }} />
+        Express.js
+      </div>,
+      <div className='project-div-list-item'>
+        <MongoDBIcon fill='white' width={40} style={{ background: '' }} />{' '}
+        MongoDB
+      </div>,
+      <div className='project-div-list-item'>
+        <MongooseIcon fill='white' width={40} style={{ background: '' }} />
+        Mongoose (ODM)
+      </div>,
+      <div className='project-div-list-item'>
+        <ReactIcon fill='white' width={40} style={{ background: '' }} />
+        React
+      </div>,
+      <div className='project-div-list-item'>
+        <JSIcon fill='white' width={40} style={{ background: '' }} />
+        JavaScript
+      </div>,
+      <div className='project-div-list-item'>
+        <HTMLIcon fill='white' width={40} style={{ background: '' }} />
+        HTML5
+      </div>,
+      <div className='project-div-list-item'>
+        <CSS3Icon fill='white' width={40} style={{ background: '' }} />
+        CSS3
+      </div>,
+      <div className='project-div-list-item'>
+        <GithubIcon fill='white' width={40} style={{ background: '' }} />
+        Github (Version Cntrl)
+      </div>,
     ],
     liveLink: '',
     githubLink: '',
@@ -77,9 +190,22 @@ const projects = [
     name: 'personal website',
     imgUrl: 'intejump.jpg',
     technologiesUsed: [
-      <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
-      <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
-      <JSIcon fill='white' width={40} style={{ background: '' }} />,
+      <div className='project-div-list-item'>
+        <ReactIcon fill='white' width={40} style={{ background: '' }} />
+        React
+      </div>,
+      <div className='project-div-list-item'>
+        <JSIcon fill='white' width={40} style={{ background: '' }} />
+        JavaScript
+      </div>,
+      <div className='project-div-list-item'>
+        <HTMLIcon fill='white' width={40} style={{ background: '' }} />
+        HTML5
+      </div>,
+      <div className='project-div-list-item'>
+        <CSS3Icon fill='white' width={40} style={{ background: '' }} />
+        CSS3
+      </div>,
     ],
     liveLink: '',
     githubLink: '',
@@ -92,9 +218,22 @@ const projects = [
     name: 'apocalist',
     imgUrl: 'intejump.jpg',
     technologiesUsed: [
-      <HTMLIcon fill='white' width={40} style={{ background: '' }} />,
-      <CSS3Icon fill='white' width={40} style={{ background: '' }} />,
-      <JSIcon fill='white' width={40} style={{ background: '' }} />,
+      <div className='project-div-list-item'>
+        <ReactIcon fill='white' width={40} style={{ background: '' }} />
+        React
+      </div>,
+      <div className='project-div-list-item'>
+        <JSIcon fill='white' width={40} style={{ background: '' }} />
+        JavaScript
+      </div>,
+      <div className='project-div-list-item'>
+        <HTMLIcon fill='white' width={40} style={{ background: '' }} />
+        HTML5
+      </div>,
+      <div className='project-div-list-item'>
+        <CSS3Icon fill='white' width={40} style={{ background: '' }} />
+        CSS3
+      </div>,
     ],
     liveLink: '',
     githubLink: '',
@@ -108,12 +247,37 @@ class App extends Component {
       resumeBeenSelected: false,
       modalBeenSelected: false,
       projects: projects,
+      project1Photo: 0,
+      project2Photo: 0,
+      project3Photo: 0,
+      project4Photo: 0,
+      project5Photo: 0,
+      project6Photo: 0,
     };
     this.displayResume = this.displayResume.bind(this);
     this.closeResume = this.closeResume.bind(this);
     this.displayModal = this.displayModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.changePhotoPlus = this.changePhotoPlus.bind(this);
   }
+
+  changePhotoPlus = (photoNumber) => {
+    if (this.state.project1Photo + 1 > 2) {
+    } else {
+      this.setState({
+        project1Photo: this.state.project1Photo + 1,
+      });
+    }
+  };
+
+  changePhotoMinus = (photoNumber) => {
+    if (this.state.project1Photo - 1 < 0) {
+    } else {
+      this.setState({
+        project1Photo: this.state.project1Photo - 1,
+      });
+    }
+  };
 
   displayResume = () => {
     this.setState({
@@ -153,6 +317,8 @@ class App extends Component {
     const modalBeenSelected = this.state.modalBeenSelected;
     const resumeBeenSelected = this.state.resumeBeenSelected;
     const handleChildClick = this.handleChildClick;
+    const changePhotoMinus = this.changePhotoMinus;
+    const changePhotoPlus = this.changePhotoPlus;
 
     return (
       <Router>
@@ -193,6 +359,8 @@ class App extends Component {
                 displayResume={displayResume}
                 closeResume={closeResume}
                 closeModal={closeModal}
+                changePhotoMinus={changePhotoMinus}
+                changePhotoPlus={changePhotoPlus}
                 {...props}
               />
             )}
