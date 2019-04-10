@@ -8,6 +8,8 @@ import InstagramIcon from './icons/InstagramIcon';
 import DownIcon from './icons/DownIcon';
 import ResumeCloseButton from './ResumeCloseButton';
 import ContactModalClose from './ContactModalClose';
+import ResumeIcon from './icons/ResumeIcon';
+import EmailIcon from './icons/EmailIcon';
 
 class Home extends Component {
   constructor(props) {
@@ -47,6 +49,34 @@ class Home extends Component {
           <div className='page-title-sub-div'>
             <div className='home-header'>Owen R. James</div>
             <div className='home-sub-header'>Software Engineer</div>
+            <div className='home-buttons-header'>
+              <button
+                className='home-link'
+                onClick={this.props.displayModal}
+                style={{ margin: '0 0.5rem' }}
+              >
+                <EmailIcon
+                  fill='#fff'
+                  width={14}
+                  className=''
+                  style={{ marginRight: '0.5rem' }}
+                />
+                Contact
+              </button>
+              <button
+                className='home-link'
+                onClick={this.props.displayResume}
+                style={{ margin: '0 0.5rem' }}
+              >
+                <ResumeIcon
+                  fill='#fff'
+                  width={14}
+                  className=''
+                  style={{ marginRight: '0.4rem', marginLeft: '0.1rem' }}
+                />
+                Resume
+              </button>
+            </div>
             <div className='home-bio'>
               Full-Stack Software Engineer. I have both front-end as well as
               back-end knowledge and am comfortable working on all tiers of app
@@ -56,7 +86,7 @@ class Home extends Component {
               skills!
             </div>
             <div className='home-icon-div'>
-              <a href='#' className='home-link'>
+              <a href='https://github.com/orjames' className='home-link'>
                 <GithubIcon
                   fill='#fff'
                   width={35}
@@ -64,7 +94,10 @@ class Home extends Component {
                   style={{ padding: '0.5rem 0' }}
                 />
               </a>
-              <a href='#' className='home-link'>
+              <a
+                href='https://www.linkedin.com/in/owenrjames/'
+                className='home-link'
+              >
                 <LinkedinIcon
                   fill='#fff'
                   width={35}
@@ -72,7 +105,10 @@ class Home extends Component {
                   style={{ padding: '0.5rem 1rem' }}
                 />
               </a>
-              <a href='#' className='home-link'>
+              <a
+                href='https://www.instagram.com/sfdogsofficial/'
+                className='home-link'
+              >
                 <InstagramIcon
                   fill='#fff'
                   width={35}

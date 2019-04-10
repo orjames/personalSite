@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import Home from './Home';
-import Contact from './Contact';
 import Projects from './Projects';
 import BottomBar from './BottomBar';
-//Components we put into our render
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import CSS3Icon from './icons/CSS3Icon';
 import ResumeIcon from './icons/ResumeIcon';
 import EmailIcon from './icons/EmailIcon';
 import HTMLIcon from './icons/HTMLIcon';
 import JSIcon from './icons/JSIcon';
-import Resume from './Resume';
 
 const projects = [
   {
@@ -192,6 +189,8 @@ class App extends Component {
                 resumeBeenSelected={resumeBeenSelected}
                 modalBeenSelected={modalBeenSelected}
                 handleChildClick={handleChildClick}
+                displayModal={displayModal}
+                displayResume={displayResume}
                 closeResume={closeResume}
                 closeModal={closeModal}
                 {...props}

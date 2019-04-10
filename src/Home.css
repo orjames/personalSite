@@ -79,9 +79,15 @@
   font-size: 2rem;
   letter-spacing: 0.8rem;
   margin: 0;
-  padding: 0 0 2rem 0;
+  padding: 0 0 1rem 0;
   width: 90%;
   max-width: 500px;
+}
+
+.home-buttons-header {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 .home-image {
