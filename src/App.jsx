@@ -57,7 +57,7 @@ const projects = [
     name: 'nextbook',
     description:
       "Me: 'I want a practical experience using SQL.' Also me: 'What book should I read next?' Enter Nextbook. Nextbook is a full-stack app using Postgres (PSQL), Express, Node.js, and EJS. It reccommends users their next book - based on a users selected genres, and books that they've read and rated in the app. The app uses 20 full crud routes, and two foreign API's.",
-    imgUrl: 'intejump.jpg',
+    imgUrl: 'nextbook2.jpg',
     technologiesUsed: [
       <div className='project-div-list-item'>
         <NodeJSIcon fill='white' width={40} style={{ background: '' }} />
@@ -97,7 +97,7 @@ const projects = [
       </div>,
     ],
     liveLink: 'https://orjames.github.io/gameproject/',
-    githubLink: 'https://github.com/orjames/gameproject',
+    githubLink: 'https://github.com/orjames/nextbook',
   },
   {
     id: 3,
