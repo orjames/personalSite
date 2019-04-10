@@ -48,8 +48,8 @@ const projects = [
         Materialize
       </div>,
     ],
-    liveLink: '',
-    githubLink: '',
+    liveLink: 'https://orjames.github.io/gameproject/',
+    githubLink: 'https://github.com/orjames/gameproject',
   },
 
   {

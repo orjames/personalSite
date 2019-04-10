@@ -24,7 +24,7 @@ const Projects = (props) => {
             {project.technologiesUsed}
           </div>
           <div className='project-buttons-div'>
-            <a href='#' className=''>
+            <a href={project.liveLink} className=''>
               <LinkIcon
                 fill='#fff'
                 width={14}
@@ -33,7 +33,7 @@ const Projects = (props) => {
               />
               Live-Link
             </a>
-            <a href='#' className=''>
+            <a href={project.githubLink} className=''>
               <GithubIcon
                 fill='#fff'
                 width={14}
