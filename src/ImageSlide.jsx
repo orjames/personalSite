@@ -1,14 +1,8 @@
 import React from 'react';
 
 const ImageSlide = ({ url }) => {
-  const styles = {
-    backgroundImage: require(`./images/${url}`),
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  };
-
   return (
-    <div className='image-slide' style={styles}>
+    <div className='image-slide'>
       {' '}
       <img
         src={require(`./images/${url}`)}

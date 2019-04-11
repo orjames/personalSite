@@ -41,35 +41,28 @@
 }
 
 .carousel {
-  border: 3px solid red;
-  /* position: relative; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
+  /* border: 3px solid red; */
+  position: relative;
+  /* transition: 0.3 ease-in-out; */
 }
 
 .image-slide {
-  height: 100%;
-  width: 80%;
-  transition: background-image 0.5s ease-in-out;
 }
 
 .slide-arrow {
   color: white;
   cursor: pointer;
   font-size: 2rem;
-  /* position: fixed; */
+  position: absolute;
   top: 50%;
 }
 
 .slide-arrow.right {
-  right: 1rem;
+  right: -2rem;
 }
 
 .slide-arrow.left {
-  left: 1rem;
+  left: -2rem;
 }
 
 .project-body {

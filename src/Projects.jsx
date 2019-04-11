@@ -5,7 +5,7 @@ import GithubIcon from './icons/GithubIcon';
 import ImageSlide from './ImageSlide';
 import Arrow from './Arrow';
 
-const imgUrls = [
+const projectImgs = [
   'nextbook1.jpg',
   'nextbook2.jpg',
   'nextbook3.jpg',
@@ -13,11 +13,25 @@ const imgUrls = [
   'nextbook5.jpg',
 ];
 
+const images = {
+  1: [
+    'nextbook1.jpg',
+    'nextbook2.jpg',
+    'nextbook3.jpg',
+    'nextbook4.jpg',
+    'nextbook5.jpg',
+  ],
+  2: ['dogPlaceholder.jpg'],
+  3: ['complement0.jpg', 'complement1.jpg', 'complement2.jpg'],
+  4: ['intejump.jpg', 'intejump2.jpg', 'intejump3.jpg'],
+  5: ['personalwebsite0.jpg'],
+  6: ['apocalist0.png', 'apocalist1.png', 'apocalist2.png'],
+};
+
 const Projects = (props) => {
   let projects = props.projects.map((project, index) => {
     let projectId = project.id;
     let liveLink = null;
-    console.log('project is,', project);
     if (project.liveLink) {
       liveLink = (
         <a href={project.liveLink} className=''>
@@ -33,14 +47,6 @@ const Projects = (props) => {
     }
     return (
       <div key={index} className='project-card'>
-        <div>
-          <img
-            src={require(`./images/${project.imgUrl}`)}
-            alt='project'
-            className='project-image'
-            width='280px'
-          />
-        </div>
         <div className='outer-carousel'>
           <div className='carousel'>
             <Arrow
@@ -48,7 +54,9 @@ const Projects = (props) => {
               clickFunction={() => props.previousSlide(projectId)}
               glyph='&#9664;'
             />
-            <ImageSlide url={imgUrls[props.currentImageIndex]} />
+            <ImageSlide
+              url={images[projectId][props.currentImageIndex[projectId]]}
+            />
             <Arrow
               direction='right'
               clickFunction={() => props.nextSlide(projectId)}

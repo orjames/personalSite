@@ -23,6 +23,7 @@ a:hover {
 
 button {
   padding: 0.25rem 1.5rem;
+  outline: none;
 }
 
 button {

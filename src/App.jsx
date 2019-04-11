@@ -241,13 +241,20 @@ const projects = [
   },
 ];
 
-const imgUrls = [
-  'https://cmeimg-a.akamaihd.net/640/clsd/getty/c64f76dc20c246ca88ee180fe4b4b781',
-  'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900',
-  'https://i0.wp.com/www.universodegatos.com/wp-content/uploads/2017/04/fivfelv7.jpg?resize=582%2C328',
-  'https://i.pinimg.com/736x/07/c3/45/07c345d0eca11d0bc97c894751ba1b46.jpg',
-  'https://ehealthforum.com/health/images/avatars/11699147425707699031013.jpeg',
-];
+const images = {
+  1: [
+    'nextbook1.jpg',
+    'nextbook2.jpg',
+    'nextbook3.jpg',
+    'nextbook4.jpg',
+    'nextbook5.jpg',
+  ],
+  2: ['dogPlaceholder'],
+  3: ['complement0.jpg', 'complement1.jpg', 'complement2.jpg'],
+  4: ['intejump.jpg', 'intejump2.jpg', 'intejump3.jpg'],
+  5: ['personalwebsite0.jpg'],
+  6: ['apocalist0.jpg', 'apocalist1.jpg', 'apocalist2.jpg'],
+};
 
 class App extends Component {
   constructor(props) {
@@ -256,7 +263,7 @@ class App extends Component {
       resumeBeenSelected: false,
       modalBeenSelected: false,
       projects: projects,
-      currentImageIndex: 0,
+      currentImageIndex: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
     };
     this.displayResume = this.displayResume.bind(this);
     this.closeResume = this.closeResume.bind(this);
@@ -267,24 +274,50 @@ class App extends Component {
   }
 
   previousSlide = (projectId) => {
-    const lastIndex = imgUrls.length - 1;
-    let { currentImageIndex } = this.state;
+    let projectImgs = images[projectId];
+    let index = 0;
+    console.log(projectImgs);
+    const lastIndex = projectImgs.length - 1;
+    let currentImageIndex = this.state.currentImageIndex[projectId];
+    console.log('currentImageIndex', currentImageIndex);
     const shouldResetIndex = currentImageIndex === 0;
-    const index = shouldResetIndex ? lastIndex : currentImageIndex - 1;
-    console.log('projectId is ', projectId);
+    if (shouldResetIndex === true) {
+      index = lastIndex;
+      this.state.currentImageIndex[projectId] = lastIndex;
+    } else {
+      this.state.currentImageIndex[projectId] =
+        this.state.currentImageIndex[projectId] - 1;
+      index = this.state.currentImageIndex[projectId];
+    }
     this.setState({
-      currentImageIndex: index,
+      [currentImageIndex[projectId]]: index,
     });
   };
 
   nextSlide = (projectId) => {
-    const lastIndex = imgUrls.length - 1;
-    let { currentImageIndex } = this.state;
+    let projectImgs = images[projectId];
+    let index = 0;
+    console.log('projectImgs is: ', projectImgs);
+    const lastIndex = projectImgs.length - 1;
+    console.log('lastIndex is: ', lastIndex);
+    let currentImageIndex = this.state.currentImageIndex[projectId];
+    console.log('currentImageIndex', currentImageIndex);
     const shouldResetIndex = currentImageIndex === lastIndex;
-    const index = shouldResetIndex ? 0 : currentImageIndex + 1;
-    console.log('projectId is ', projectId);
+    console.log('shouldResetIndex is: ', shouldResetIndex);
+    if (shouldResetIndex === true) {
+      index = 0;
+      this.state.currentImageIndex[projectId] = 0;
+    } else {
+      this.state.currentImageIndex[projectId] =
+        this.state.currentImageIndex[projectId] + 1;
+      index = this.state.currentImageIndex[projectId];
+    }
+    console.log(
+      'state current project',
+      this.state.currentImageIndex[projectId]
+    );
     this.setState({
-      currentImageIndex: index,
+      [currentImageIndex]: index,
     });
   };
 
