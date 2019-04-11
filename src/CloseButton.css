@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Raleway-Light';
+  src: local('Raleway-Light'), url(./fonts/Raleway-Light.ttf) format('truetype');
+}
+
 .delete {
   position: absolute;
   top: -1rem;
@@ -84,10 +89,25 @@
 
 label {
   letter-spacing: 0.1rem;
+  margin-bottom: 0.1rem;
 }
 
 .input {
   width: 97%;
+}
+
+input[type='text'],
+input[type='email'],
+textarea,
+select {
+  outline: none;
+  border-top: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-right: none;
+  color: white;
+  padding: 0.25rem;
+  letter-spacing: 0.08rem;
+  font-family: Raleway-Light;
 }
 
 textarea {

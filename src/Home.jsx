@@ -47,9 +47,9 @@ class Home extends Component {
         <div>{modal}</div>
         <div className='page-title'>
           <div className='page-title-sub-div'>
-            <div className='home-header'>Owen R. James</div>
-            <div className='home-sub-header'>Software Engineer</div>
-            <div className='home-buttons-header'>
+            <div className='home-header fadein'>Owen R. James</div>
+            <div className='home-sub-header fadein'>Software Engineer</div>
+            <div className='home-buttons-header fadein2'>
               <button
                 className='home-link'
                 onClick={this.props.displayModal}
@@ -64,7 +64,7 @@ class Home extends Component {
                 Contact
               </button>
               <button
-                className='home-link'
+                className='home-link '
                 onClick={this.props.displayResume}
                 style={{ margin: '0 0.5rem' }}
               >
@@ -77,15 +77,15 @@ class Home extends Component {
                 Resume
               </button>
             </div>
-            <div className='home-bio'>
-              Full-Stack Software Engineer. I have both front-end as well as
-              back-end knowledge and am comfortable working on all tiers of app
+            <div className='home-bio fadein2'>
+              Full-Stack Software Engineer. I have both front-end and back-end
+              knowledge and am comfortable working on all tiers of app
               development. I earned a BS from Cal Poly and MS from UC Berkeley.
               When not geeking out, I enjoy spending time with dogs and
               exploring the Bay Area. Please, scroll down to see my projects and
               skills!
             </div>
-            <div className='home-icon-div'>
+            <div className='home-icon-div fadein2'>
               <a href='https://github.com/orjames' className='home-link'>
                 <GithubIcon
                   fill='#fff'
@@ -128,10 +128,12 @@ class Home extends Component {
           </div>
         </div>
         <div className='resume-div'>{resume}</div>
-        <div className='projects-title-div'>projects</div>
+        <div className='projects-title-div fadein2'>projects</div>
         <Projects
           projects={this.props.projects}
-          nameBeenSelected={this.props.nameBeenSelected}
+          currentImageIndex={this.props.currentImageIndex}
+          nextSlide={this.props.nextSlide}
+          previousSlide={this.props.previousSlide}
           {...this.props}
         />
         <Skills />

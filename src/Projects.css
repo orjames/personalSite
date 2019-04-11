@@ -11,14 +11,15 @@
 .projects-div {
   /* border: 3px solid lightblue; */
   display: flex;
-  background-color: rgba(4, 10, 14, 0.9);
+  /* background-color: rgba(4, 10, 14, 0.9); */
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   text-align: center;
 }
 .project-card {
-  border: 3px solid gray;
+  /* border: 3px solid gray; */
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 0.3rem;
   display: flex;
   flex-direction: column;
@@ -31,6 +32,44 @@
 }
 
 .project-image {
+}
+
+.outer-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.carousel {
+  border: 3px solid red;
+  /* position: relative; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.image-slide {
+  height: 100%;
+  width: 80%;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.slide-arrow {
+  color: white;
+  cursor: pointer;
+  font-size: 2rem;
+  /* position: fixed; */
+  top: 50%;
+}
+
+.slide-arrow.right {
+  right: 1rem;
+}
+
+.slide-arrow.left {
+  left: 1rem;
 }
 
 .project-body {
@@ -53,6 +92,7 @@
 
 .project-buttons-div {
   /* border: 3px solid olivedrab; */
+  margin: 1rem 0;
 }
 
 .project-name {
@@ -63,7 +103,6 @@
 }
 
 .project-technologies {
-  margin-top: 1rem;
   font-size: 1.5rem;
   font-family: Pangram-ExtraLight;
   letter-spacing: 0.15rem;

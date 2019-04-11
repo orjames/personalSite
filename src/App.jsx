@@ -26,37 +26,8 @@ import ExpressIcon from './icons/ExpressIcon';
 const projects = [
   {
     id: 1,
-    name: 'intejump',
-    description:
-      'Intejump, a portmanteau of integer and jump, is a static html, css, and javascript based app. The game uses logic to create a board of combinations to either single or double jump to the next slot. The cumulative score is shown, and the goal is to reach the next block by landing on the right slots to sum to the next safe block.',
-    imgUrl: 'intejump.jpg',
-    technologiesUsed: [
-      <div className='project-div-list-item'>
-        <JSIcon fill='white' width={40} style={{ background: '' }} />
-        JavaScript
-      </div>,
-      <div className='project-div-list-item'>
-        <HTMLIcon fill='white' width={40} style={{ background: '' }} />
-        HTML5
-      </div>,
-      <div className='project-div-list-item'>
-        <CSS3Icon fill='white' width={40} style={{ background: '' }} />
-        CSS3
-      </div>,
-      <div className='project-div-list-item'>
-        <MaterializeIcon fill='white' width={40} style={{ background: '' }} />
-        Materialize
-      </div>,
-    ],
-    liveLink: 'https://orjames.github.io/gameproject/',
-    githubLink: 'https://github.com/orjames/gameproject',
-  },
-
-  {
-    id: 2,
     name: 'nextbook',
-    description:
-      "Me: 'I want a practical experience using SQL.' Also me: 'What book should I read next?' Enter Nextbook. Nextbook is a full-stack app using Postgres (PSQL), Express, Node.js, and EJS. It reccommends users their next book - based on a users selected genres, and books that they've read and rated in the app. The app uses 20 full crud routes, and two foreign API's.",
+    description: `Me: 'I want a practical experience using SQL.' Also me: 'What book should I read next?' Enter Nextbook. Nextbook is a full-stack app using Postgres (PSQL), Express, Node.js, and EJS. It recommends users their next book - based on a users selected genres, and books that they've read and rated in the app. The app uses 20 full crud routes, and two foreign API's.`,
     imgUrl: 'nextbook2.jpg',
     technologiesUsed: [
       <div className='project-div-list-item'>
@@ -100,7 +71,7 @@ const projects = [
     githubLink: 'https://github.com/orjames/nextbook',
   },
   {
-    id: 3,
+    id: 2,
     description:
       "Have you ever been in a situation where you know you want to get dinner but have no idea where you want to go? Your friend offers up a weak 'I'm good with anything.' Hunger and indecisiveness end here. Nextbite is a full-stack app using the MERN stack (MongoDB with Mongoose, Express, React, and Node.js). The app allows users to browse their feed for photos of food from local restaurants for what looks good for their next bite. Think Instagram for local eateries.",
     name: 'nextbite',
@@ -136,7 +107,7 @@ const projects = [
   },
 
   {
-    id: 4,
+    id: 3,
     description:
       "Color complements which lead to many compliments. Complement is a full-stack MERN app (MongoDB with Mongoose, Express, React, and Node.js). It uses full CRUD routes, and three foreign API's. The app allows the user to upload a photo, then it analyzes the photo to pick out the predominant colors, and displays complementary colors. The app can help pick out accents for interior design, website design, or outfit choices.",
     name: 'complement',
@@ -182,13 +153,39 @@ const projects = [
     liveLink: 'https://orj-mern-project.herokuapp.com/',
     githubLink: 'https://github.com/orjames/mernProject',
   },
-
+  {
+    id: 4,
+    name: 'intejump',
+    description:
+      'Intejump, a portmanteau of integer and jump, is a static html, css, and javascript based app. The game uses logic to create a board of combinations to either single or double jump to the next slot. The cumulative score is shown, and the goal is to reach the next block by landing on the right slots to sum to the next safe block.',
+    imgUrl: 'intejump.jpg',
+    technologiesUsed: [
+      <div className='project-div-list-item'>
+        <JSIcon fill='white' width={40} style={{ background: '' }} />
+        JavaScript
+      </div>,
+      <div className='project-div-list-item'>
+        <HTMLIcon fill='white' width={40} style={{ background: '' }} />
+        HTML5
+      </div>,
+      <div className='project-div-list-item'>
+        <CSS3Icon fill='white' width={40} style={{ background: '' }} />
+        CSS3
+      </div>,
+      <div className='project-div-list-item'>
+        <MaterializeIcon fill='white' width={40} style={{ background: '' }} />
+        Materialize
+      </div>,
+    ],
+    liveLink: 'https://orjames.github.io/gameproject/',
+    githubLink: 'https://github.com/orjames/gameproject',
+  },
   {
     id: 5,
     description:
       "If you're reading this, this is this. Portfolio showcasing projects completed, skills, a resume, and technologies familiar with. Built in React.",
     name: 'personal website',
-    imgUrl: 'intejump.jpg',
+    imgUrl: 'personalwebsite0.jpg',
     technologiesUsed: [
       <div className='project-div-list-item'>
         <ReactIcon fill='white' width={40} style={{ background: '' }} />
@@ -244,6 +241,14 @@ const projects = [
   },
 ];
 
+const imgUrls = [
+  'https://cmeimg-a.akamaihd.net/640/clsd/getty/c64f76dc20c246ca88ee180fe4b4b781',
+  'https://lh3.googleusercontent.com/oxPeODS2m6rYIVbhcQChRtOWEYeGDwbeeeB1cDU2o_WYAVPU61VIgx-_6BAh5gSL8Sw=h900',
+  'https://i0.wp.com/www.universodegatos.com/wp-content/uploads/2017/04/fivfelv7.jpg?resize=582%2C328',
+  'https://i.pinimg.com/736x/07/c3/45/07c345d0eca11d0bc97c894751ba1b46.jpg',
+  'https://ehealthforum.com/health/images/avatars/11699147425707699031013.jpeg',
+];
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -251,36 +256,36 @@ class App extends Component {
       resumeBeenSelected: false,
       modalBeenSelected: false,
       projects: projects,
-      project1Photo: 0,
-      project2Photo: 0,
-      project3Photo: 0,
-      project4Photo: 0,
-      project5Photo: 0,
-      project6Photo: 0,
+      currentImageIndex: 0,
     };
     this.displayResume = this.displayResume.bind(this);
     this.closeResume = this.closeResume.bind(this);
     this.displayModal = this.displayModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
-    this.changePhotoPlus = this.changePhotoPlus.bind(this);
+    this.nextSlide = this.nextSlide.bind(this);
+    this.previousSlide = this.previousSlide.bind(this);
   }
 
-  changePhotoPlus = (photoNumber) => {
-    if (this.state.project1Photo + 1 > 2) {
-    } else {
-      this.setState({
-        project1Photo: this.state.project1Photo + 1,
-      });
-    }
+  previousSlide = (projectId) => {
+    const lastIndex = imgUrls.length - 1;
+    let { currentImageIndex } = this.state;
+    const shouldResetIndex = currentImageIndex === 0;
+    const index = shouldResetIndex ? lastIndex : currentImageIndex - 1;
+    console.log('projectId is ', projectId);
+    this.setState({
+      currentImageIndex: index,
+    });
   };
 
-  changePhotoMinus = (photoNumber) => {
-    if (this.state.project1Photo - 1 < 0) {
-    } else {
-      this.setState({
-        project1Photo: this.state.project1Photo - 1,
-      });
-    }
+  nextSlide = (projectId) => {
+    const lastIndex = imgUrls.length - 1;
+    let { currentImageIndex } = this.state;
+    const shouldResetIndex = currentImageIndex === lastIndex;
+    const index = shouldResetIndex ? 0 : currentImageIndex + 1;
+    console.log('projectId is ', projectId);
+    this.setState({
+      currentImageIndex: index,
+    });
   };
 
   displayResume = () => {
@@ -309,7 +314,6 @@ class App extends Component {
 
   handleChildClick = (e) => {
     e.stopPropagation();
-    console.log('child');
   };
 
   render() {
@@ -321,8 +325,9 @@ class App extends Component {
     const modalBeenSelected = this.state.modalBeenSelected;
     const resumeBeenSelected = this.state.resumeBeenSelected;
     const handleChildClick = this.handleChildClick;
-    const changePhotoMinus = this.changePhotoMinus;
-    const changePhotoPlus = this.changePhotoPlus;
+    const currentImageIndex = this.state.currentImageIndex;
+    const previousSlide = this.previousSlide;
+    const nextSlide = this.nextSlide;
 
     return (
       <Router>
@@ -363,8 +368,9 @@ class App extends Component {
                 displayResume={displayResume}
                 closeResume={closeResume}
                 closeModal={closeModal}
-                changePhotoMinus={changePhotoMinus}
-                changePhotoPlus={changePhotoPlus}
+                currentImageIndex={currentImageIndex}
+                previousSlide={previousSlide}
+                nextSlide={nextSlide}
                 {...props}
               />
             )}
