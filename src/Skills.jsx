@@ -16,6 +16,7 @@ import GithubIcon from './icons/GithubIcon';
 import SequelizeIcon from './icons/SequelizeIcon';
 import DjangoIcon from './icons/DjangoIcon';
 import ExpressIcon from './icons/ExpressIcon';
+import TypeScriptIcon from './icons/TypeScriptIcon';
 
 const Skills = (props) => {
   return (
@@ -71,6 +72,14 @@ const Skills = (props) => {
           <div className='skills-div-list-item'>
             <DjangoIcon fill='white' width={40} style={{ background: '' }} />
             Django
+          </div>
+          <div className='skills-div-list-item'>
+            <TypeScriptIcon
+              fill='white'
+              width={40}
+              style={{ background: '' }}
+            />
+            TypeScript
           </div>
           <div className='skills-div-list-item'>
             <HTMLIcon fill='white' width={40} style={{ background: '' }} />
