@@ -9,7 +9,7 @@ import ResumeIcon from './icons/ResumeIcon';
 import EmailIcon from './icons/EmailIcon';
 import HTMLIcon from './icons/HTMLIcon';
 import JSIcon from './icons/JSIcon';
-import PythonIcon from './icons/PythonIcon';
+import BarsIcon from './icons/BarsIcon';
 import SQLIcon from './icons/SQLIcon';
 import MaterializeIcon from './icons/MaterializeIcon';
 import MongoDBIcon from './icons/MongoDBIcon';
@@ -20,8 +20,9 @@ import MongooseIcon from './icons/MongooseIcon';
 import PostgresIcon from './icons/PostgresIcon';
 import GithubIcon from './icons/GithubIcon';
 import SequelizeIcon from './icons/SequelizeIcon';
-import DjangoIcon from './icons/DjangoIcon';
+import CloudIcon from './icons/CloudIcon';
 import ExpressIcon from './icons/ExpressIcon';
+import CloseIcon from './icons/CloseIcon';
 
 const projects = [
   {
@@ -94,6 +95,10 @@ const projects = [
         JavaScript
       </div>,
       <div className='project-div-list-item'>
+        <CloudIcon fill='white' width={40} style={{ background: '' }} />
+        Cloudinary
+      </div>,
+      <div className='project-div-list-item'>
         <HTMLIcon fill='white' width={40} style={{ background: '' }} />
         HTML5
       </div>,
@@ -136,6 +141,10 @@ const projects = [
       <div className='project-div-list-item'>
         <JSIcon fill='white' width={40} style={{ background: '' }} />
         JavaScript
+      </div>,
+      <div className='project-div-list-item'>
+        <CloudIcon fill='white' width={40} style={{ background: '' }} />
+        Cloudinary
       </div>,
       <div className='project-div-list-item'>
         <HTMLIcon fill='white' width={40} style={{ background: '' }} />
@@ -241,21 +250,6 @@ const projects = [
   },
 ];
 
-const images = {
-  1: [
-    'nextbook1.jpg',
-    'nextbook2.jpg',
-    'nextbook3.jpg',
-    'nextbook4.jpg',
-    'nextbook5.jpg',
-  ],
-  2: ['dogPlaceholder'],
-  3: ['complement0.jpg', 'complement1.jpg', 'complement2.jpg'],
-  4: ['intejump.jpg', 'intejump2.jpg', 'intejump3.jpg'],
-  5: ['personalwebsite0.jpg'],
-  6: ['apocalist0.jpg', 'apocalist1.jpg', 'apocalist2.jpg'],
-};
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -264,6 +258,21 @@ class App extends Component {
       modalBeenSelected: false,
       projects: projects,
       currentImageIndex: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 },
+      dropDownSelected: false,
+      images: {
+        1: [
+          'nextbook1.jpg',
+          'nextbook2.jpg',
+          'nextbook3.jpg',
+          'nextbook4.jpg',
+          'nextbook5.jpg',
+        ],
+        2: ['dogPlaceholder'],
+        3: ['complement0.jpg', 'complement1.jpg', 'complement2.jpg'],
+        4: ['intejump.jpg', 'intejump2.jpg', 'intejump3.jpg'],
+        5: ['personalwebsite0.jpg'],
+        6: ['apocalist0.jpg', 'apocalist1.jpg', 'apocalist2.jpg'],
+      },
     };
     this.displayResume = this.displayResume.bind(this);
     this.closeResume = this.closeResume.bind(this);
@@ -274,12 +283,11 @@ class App extends Component {
   }
 
   previousSlide = (projectId) => {
+    const images = this.state.images;
     let projectImgs = images[projectId];
     let index = 0;
-    console.log(projectImgs);
     const lastIndex = projectImgs.length - 1;
     let currentImageIndex = this.state.currentImageIndex[projectId];
-    console.log('currentImageIndex', currentImageIndex);
     const shouldResetIndex = currentImageIndex === 0;
     if (shouldResetIndex === true) {
       index = lastIndex;
@@ -295,15 +303,12 @@ class App extends Component {
   };
 
   nextSlide = (projectId) => {
+    const images = this.state.images;
     let projectImgs = images[projectId];
     let index = 0;
-    console.log('projectImgs is: ', projectImgs);
     const lastIndex = projectImgs.length - 1;
-    console.log('lastIndex is: ', lastIndex);
     let currentImageIndex = this.state.currentImageIndex[projectId];
-    console.log('currentImageIndex', currentImageIndex);
     const shouldResetIndex = currentImageIndex === lastIndex;
-    console.log('shouldResetIndex is: ', shouldResetIndex);
     if (shouldResetIndex === true) {
       index = 0;
       this.state.currentImageIndex[projectId] = 0;
@@ -312,10 +317,6 @@ class App extends Component {
         this.state.currentImageIndex[projectId] + 1;
       index = this.state.currentImageIndex[projectId];
     }
-    console.log(
-      'state current project',
-      this.state.currentImageIndex[projectId]
-    );
     this.setState({
       [currentImageIndex]: index,
     });
@@ -349,6 +350,18 @@ class App extends Component {
     e.stopPropagation();
   };
 
+  openDropDown = () => {
+    this.setState({
+      dropDownSelected: true,
+    });
+  };
+
+  closeDropDown = () => {
+    this.setState({
+      dropDownSelected: false,
+    });
+  };
+
   render() {
     const projects = this.state.projects;
     const displayResume = this.displayResume;
@@ -361,11 +374,23 @@ class App extends Component {
     const currentImageIndex = this.state.currentImageIndex;
     const previousSlide = this.previousSlide;
     const nextSlide = this.nextSlide;
+    const dropDownSelected = this.state.dropDownSelected;
+    const openDropDown = this.openDropDown;
+    const closeDropDown = this.closeDropDown;
 
-    return (
-      <Router>
-        <div className='app'>
-          <div className='contact-button-div'>
+    let dropDown;
+    if (dropDownSelected) {
+      dropDown = (
+        <div className='contact-button-div'>
+          <button className='home-link left' onClick={closeDropDown}>
+            <CloseIcon
+              fill='#fff'
+              width={31}
+              className=''
+              style={{ marginRight: '0.3rem' }}
+            />
+          </button>
+          <div className='contact-button-sub-div'>
             <button className='home-link' onClick={displayModal}>
               <EmailIcon
                 fill='#fff'
@@ -385,6 +410,26 @@ class App extends Component {
               Resume
             </button>
           </div>
+        </div>
+      );
+    } else {
+      dropDown = (
+        <div className='contact-button-div'>
+          <button className='home-link' onClick={openDropDown}>
+            <BarsIcon
+              fill='#fff'
+              width={27}
+              className=''
+              style={{ marginTop: '0.15rem', marginLeft: '0.1rem' }}
+            />
+          </button>
+        </div>
+      );
+    }
+    return (
+      <Router>
+        <div className='app'>
+          {dropDown}
           <div>
             <BottomBar />
           </div>

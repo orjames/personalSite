@@ -10,14 +10,14 @@
 }
 
 a {
-  color: white;
+  color: rgb(196, 226, 255);
   text-decoration: none;
   font-family: Pangram-ExtraLight;
   letter-spacing: 0.15rem;
 }
 
 a:hover {
-  color: gray;
+  color: rgba(68, 153, 204, 1);
   text-decoration: underline;
 }
 
@@ -42,12 +42,27 @@ button:hover {
 
 .contact-button-div {
   /* border: 3px solid white; */
+  z-index: 10;
   position: fixed;
   top: 1rem;
   left: 1rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-content: flex-start;
   /* background-color: rgba(252, 252, 252, 0.4); */
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.contact-button-sub-div {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid pink; */
 }
 
 .project-div-list-item {
@@ -71,9 +86,5 @@ button:hover {
 }
 
 .svg-icon:hover path {
-  fill: #49c;
-}
-
-.svg-icon.telephone:hover path {
-  fill: #49c;
+  fill: rgb(68, 153, 204);
 }
