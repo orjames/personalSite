@@ -3,6 +3,10 @@
   src: local('Pangram-ExtraLight'),
     url(./fonts/Pangram-ExtraLight.otf) format('truetype');
 }
+@font-face {
+  font-family: 'Raleway-Light';
+  src: local('Raleway-Light'), url(./fonts/Raleway-Light.ttf) format('truetype');
+}
 
 .app {
   height: 100%;
@@ -12,7 +16,7 @@
 a {
   color: rgb(196, 226, 255);
   text-decoration: none;
-  font-family: Pangram-ExtraLight;
+  font-family: Raleway-Light;
   letter-spacing: 0.15rem;
 }
 
@@ -46,6 +50,13 @@ button:hover {
   flex-direction: row;
   align-content: flex-start;
   /* background-color: rgba(252, 252, 252, 0.4); */
+}
+
+.dark {
+  background-color: rgba(3, 11, 18, 0.8);
+  border-radius: 0.3rem;
+  padding: 0 0.3rem 0.3rem 0;
+  /* border: 3px solid red; */
 }
 
 .left {

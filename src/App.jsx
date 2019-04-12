@@ -392,7 +392,7 @@ class App extends Component {
     let dropDown;
     if (dropDownSelected) {
       dropDown = (
-        <div className='contact-button-div'>
+        <div className='contact-button-div dark'>
           <div className='home-link left' onClick={closeDropDown}>
             <CloseIcon
               fill='#fff'

@@ -19,7 +19,7 @@ const ContactModal = (props) => {
           <textarea type='text' name='message' className='input' />
         </div>
         <div className='input-div'>
-          <button type='submit' class='btn btn-1 btn-1e'>
+          <button type='submit' className='btn btn-1 btn-1e'>
             Send
           </button>
         </div>

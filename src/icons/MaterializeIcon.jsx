@@ -1,5 +1,4 @@
 import React from 'react';
-import { pathToFileURL } from 'url';
 
 const MaterializeIcon = ({
   style = {},
