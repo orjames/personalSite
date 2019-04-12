@@ -36,10 +36,6 @@ button:hover {
   color: white;
 }
 
-.chosen {
-  background-color: rgba(252, 252, 252, 0.2);
-}
-
 .contact-button-div {
   /* border: 3px solid white; */
   z-index: 10;

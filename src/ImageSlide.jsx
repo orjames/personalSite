@@ -9,6 +9,7 @@ const ImageSlide = ({ url }) => {
         alt='project'
         className='project-image'
         width='280px'
+        style={{ borderRadius: '0.3rem' }}
       />
     </div>
   );

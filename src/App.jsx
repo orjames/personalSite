@@ -267,10 +267,20 @@ class App extends Component {
           'nextbook4.jpg',
           'nextbook5.jpg',
         ],
-        2: ['dogPlaceholder.jpg'],
+        2: [
+          'nextbitePlaceholder.jpg',
+          'nextbitePlaceholder1.jpg',
+          'nextbitePlaceholder2.jpg',
+          'nextbitePlaceholder3.jpg',
+          'nextbitePlaceholder4.jpg',
+        ],
         3: ['complement0.jpg', 'complement1.jpg', 'complement2.jpg'],
         4: ['intejump.jpg', 'intejump2.jpg', 'intejump3.jpg'],
-        5: ['personalwebsite0.jpg'],
+        5: [
+          'personalwebsite0.jpg',
+          'personalwebsite1.jpg',
+          'personalwebsite2.jpg',
+        ],
         6: ['apocalist0.png', 'apocalist1.png', 'apocalist2.png'],
       },
     };
