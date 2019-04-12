@@ -7,25 +7,27 @@ const ContactModal = (props) => {
       <div className='modal-title-div'>contact</div>
       <form name='contact' netlify>
         <div className='input-div'>
-          <label>Name: </label>
-          <input type='text' name='name' className='input' placeholder='name' />
+          <input
+            type='text'
+            name='name'
+            className='input'
+            placeholder='name...'
+          />
         </div>
         <div className='input-div'>
-          <label>Email: </label>
           <input
             type='email'
             name='email'
             className='input'
-            placeholder='email'
+            placeholder='email...'
           />
         </div>
         <div className='input-div'>
-          <label>Message: </label>
           <textarea
             type='text'
             name='message'
             className='input'
-            placeholder='message'
+            placeholder='message...'
           />
         </div>
         <div className='input-div'>

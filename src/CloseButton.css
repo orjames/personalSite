@@ -110,6 +110,7 @@ select {
   border-top: none;
   background: rgba(255, 255, 255, 0.1);
   border-right: none;
+  border-left: none;
   color: white;
   padding: 0.25rem;
   letter-spacing: 0.08rem;
