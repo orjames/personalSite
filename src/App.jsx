@@ -393,14 +393,14 @@ class App extends Component {
     if (dropDownSelected) {
       dropDown = (
         <div className='contact-button-div'>
-          <button className='home-link left' onClick={closeDropDown}>
+          <div className='home-link left' onClick={closeDropDown}>
             <CloseIcon
               fill='#fff'
               width={31}
               className=''
               style={{ marginRight: '0.3rem' }}
             />
-          </button>
+          </div>
           <div className='contact-button-sub-div'>
             <button className='home-link' onClick={displayModal}>
               <EmailIcon
@@ -426,14 +426,14 @@ class App extends Component {
     } else {
       dropDown = (
         <div className='contact-button-div'>
-          <button className='home-link' onClick={openDropDown}>
+          <div className='home-link' onClick={openDropDown}>
             <BarsIcon
               fill='#fff'
               width={27}
               className=''
               style={{ marginTop: '0.15rem', marginLeft: '0.1rem' }}
             />
-          </button>
+          </div>
         </div>
       );
     }
