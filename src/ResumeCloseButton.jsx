@@ -11,11 +11,15 @@ const ResumeCloseButton = (props) => {
           width={35}
           onClick={() => props.closeResume()}
           className='delete-resume'
+          fill={'gray'}
         />
       </div>
-      <div>
-        <Resume />
-        <span className='resume-close-link' onClick={() => props.closeResume()}>
+      <Resume />
+      <div style={{ marginBottom: '1rem', marginTop: '0.2rem' }}>
+        <span
+          className='resume-close-link home-link'
+          onClick={() => props.closeResume()}
+        >
           close
         </span>
       </div>

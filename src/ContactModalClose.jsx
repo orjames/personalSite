@@ -14,7 +14,7 @@ const ContactModalClose = (props) => {
     >
       <div className='modal-inner-inner-div'>
         <div onClick={() => props.closeModal()} className='delete'>
-          <XIcon width={35} />
+          <XIcon width={35} fill={'white'} />
         </div>
         <img src={OwenPhoto} alt='Owen R.' className='modal-image' />
         <ContactModal />

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const ResumeIcon = ({
+const XIcon = ({
   style = {},
-  fill = '#fff',
+  fill = {},
   width = '100%',
   className = '',
   viewBox = '0 0 512 512',
@@ -10,6 +10,7 @@ const ResumeIcon = ({
   <svg
     width={width}
     style={style}
+    fill={fill}
     height={width}
     viewBox={viewBox}
     className={`svg-icon ${className || ''}`}
@@ -23,4 +24,4 @@ const ResumeIcon = ({
   </svg>
 );
 
-export default ResumeIcon;
+export default XIcon;

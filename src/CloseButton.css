@@ -10,9 +10,8 @@
 }
 .delete-resume {
   position: absolute;
-  top: -1rem;
-  right: -1rem;
-  /* width: 100%; */
+  top: -0.6rem;
+  right: -0.6rem;
 }
 
 .fadein {
@@ -39,14 +38,21 @@
 }
 
 .resume-inner-div {
-  /* border: 1px solid orange; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-content: flex-start;
   position: relative;
+  height: 33rem;
+  /* border: 3px solid orange; */
 }
 
+.resume-image {
+  width: 22rem;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
 .modal-inner-div {
   /* border: 1px solid orange; */
   display: flex;
