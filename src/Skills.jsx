@@ -68,7 +68,7 @@ const Skills = (props) => {
           </div>
           <div className='skills-div-list-item'>
             <MongooseIcon fill='white' width={40} style={{ background: '' }} />
-            Mongoose (ODM)
+            Mongoose
           </div>
           <div className='skills-div-list-item'>
             <DjangoIcon fill='white' width={40} style={{ background: '' }} />
@@ -92,7 +92,7 @@ const Skills = (props) => {
           </div>
           <div className='skills-div-list-item'>
             <GithubIcon fill='white' width={40} style={{ background: '' }} />
-            Github (Version Cntrl)
+            Team
           </div>
           <div className='skills-div-list-item'>
             <CloudIcon fill='white' width={40} style={{ background: '' }} />

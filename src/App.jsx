@@ -132,7 +132,7 @@ const projects = [
       </div>,
       <div className='project-div-list-item'>
         <MongooseIcon fill='white' width={40} style={{ background: '' }} />
-        Mongoose (ODM)
+        Mongoose
       </div>,
       <div className='project-div-list-item'>
         <ReactIcon fill='white' width={40} style={{ background: '' }} />
@@ -156,7 +156,7 @@ const projects = [
       </div>,
       <div className='project-div-list-item'>
         <GithubIcon fill='white' width={40} style={{ background: '' }} />
-        Github (Version Cntrl)
+        Team
       </div>,
     ],
     liveLink: 'https://orj-mern-project.herokuapp.com/',
@@ -242,7 +242,7 @@ const projects = [
       </div>,
       <div className='project-div-list-item'>
         <GithubIcon fill='white' width={40} style={{ background: '' }} />
-        Github (Version Cntrl)
+        Team
       </div>,
     ],
     liveLink: '',
@@ -277,6 +277,7 @@ class App extends Component {
         3: ['complement0.jpg', 'complement1.jpg', 'complement2.jpg'],
         4: ['intejump.jpg', 'intejump2.jpg', 'intejump3.jpg'],
         5: [
+          'personalwebsiteRecursive.png',
           'personalwebsite0.jpg',
           'personalwebsite1.jpg',
           'personalwebsite2.jpg',

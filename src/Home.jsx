@@ -80,10 +80,10 @@ class Home extends Component {
             <div className='home-bio fadein2'>
               Full-Stack Software Engineer. I have both front-end and back-end
               knowledge and am comfortable working on all tiers of app
-              development. I earned a BS from Cal Poly and MS from UC Berkeley.
-              When not geeking out, I enjoy spending time with dogs and
-              exploring the Bay Area. Please, scroll down to see my projects and
-              skills!
+              development. I earned a BS from Cal Poly and MS from UC Berkeley
+              in Civil Engineering. When not geeking out, I enjoy spending time
+              with dogs and exploring the Bay Area.
+              <br /> Please, scroll down to see my projects and skills!
             </div>
             <div className='home-icon-div fadein2'>
               <a href='https://github.com/orjames' className='home-link'>
