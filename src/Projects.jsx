@@ -3,32 +3,11 @@ import './Projects.css';
 import LinkIcon from './icons/LinkIcon';
 import GithubIcon from './icons/GithubIcon';
 import ImageSlide from './ImageSlide';
-import Arrow from './Arrow';
-
-const projectImgs = [
-  'nextbook1.jpg',
-  'nextbook2.jpg',
-  'nextbook3.jpg',
-  'nextbook4.jpg',
-  'nextbook5.jpg',
-];
-
-const images = {
-  1: [
-    'nextbook1.jpg',
-    'nextbook2.jpg',
-    'nextbook3.jpg',
-    'nextbook4.jpg',
-    'nextbook5.jpg',
-  ],
-  2: ['dogPlaceholder.jpg'],
-  3: ['complement0.jpg', 'complement1.jpg', 'complement2.jpg'],
-  4: ['intejump.jpg', 'intejump2.jpg', 'intejump3.jpg'],
-  5: ['personalwebsite0.jpg'],
-  6: ['apocalist0.png', 'apocalist1.png', 'apocalist2.png'],
-};
+import RightIcon from './icons/RightIcon';
+import LeftIcon from './icons/LeftIcon';
 
 const Projects = (props) => {
+  let images = props.images;
   let projects = props.projects.map((project, index) => {
     let projectId = project.id;
     let liveLink = null;
@@ -49,19 +28,26 @@ const Projects = (props) => {
       <div key={index} className='project-card'>
         <div className='outer-carousel'>
           <div className='carousel'>
-            <Arrow
-              direction='left'
-              clickFunction={() => props.previousSlide(projectId)}
-              glyph='&#9664;'
-            />
+            <div onClick={() => props.previousSlide(projectId)}>
+              <LeftIcon
+                className={`slide-arrow left`}
+                fill='#fff'
+                width={14}
+                style={{}}
+              />
+            </div>
             <ImageSlide
               url={images[projectId][props.currentImageIndex[projectId]]}
             />
-            <Arrow
-              direction='right'
-              clickFunction={() => props.nextSlide(projectId)}
-              glyph='&#9654;'
-            />
+            <div onClick={() => props.nextSlide(projectId)}>
+              <RightIcon
+                className={`slide-arrow right`}
+                onClick={() => props.nextSlide(projectId)}
+                fill='#fff'
+                width={14}
+                style={{}}
+              />
+            </div>
           </div>
         </div>
         <div className='project-body'>

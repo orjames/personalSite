@@ -134,6 +134,7 @@ class Home extends Component {
           currentImageIndex={this.props.currentImageIndex}
           nextSlide={this.props.nextSlide}
           previousSlide={this.props.previousSlide}
+          images={this.props.images}
           {...this.props}
         />
         <Skills />

@@ -267,11 +267,11 @@ class App extends Component {
           'nextbook4.jpg',
           'nextbook5.jpg',
         ],
-        2: ['dogPlaceholder'],
+        2: ['dogPlaceholder.jpg'],
         3: ['complement0.jpg', 'complement1.jpg', 'complement2.jpg'],
         4: ['intejump.jpg', 'intejump2.jpg', 'intejump3.jpg'],
         5: ['personalwebsite0.jpg'],
-        6: ['apocalist0.jpg', 'apocalist1.jpg', 'apocalist2.jpg'],
+        6: ['apocalist0.png', 'apocalist1.png', 'apocalist2.png'],
       },
     };
     this.displayResume = this.displayResume.bind(this);
@@ -377,6 +377,7 @@ class App extends Component {
     const dropDownSelected = this.state.dropDownSelected;
     const openDropDown = this.openDropDown;
     const closeDropDown = this.closeDropDown;
+    const images = this.state.images;
 
     let dropDown;
     if (dropDownSelected) {
@@ -449,6 +450,7 @@ class App extends Component {
                 currentImageIndex={currentImageIndex}
                 previousSlide={previousSlide}
                 nextSlide={nextSlide}
+                images={images}
                 {...props}
               />
             )}
