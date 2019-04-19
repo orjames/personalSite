@@ -107,7 +107,7 @@ const projects = [
         CSS3
       </div>,
     ],
-    liveLink: 'https://dashboard.heroku.com/apps/nextbite',
+    liveLink: 'https://nextbite.herokuapp.com/',
     githubLink: 'https://github.com/orjames/nextbite',
   },
 
