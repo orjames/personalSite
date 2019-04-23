@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './CloseButton.css';
+
 const encode = (data) => {
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
 };
 
-class ContactModal extends Component {
+class ContactModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = { name: '', email: '', message: '' };
@@ -33,6 +34,7 @@ class ContactModal extends Component {
       <div className='form-div'>
         <div className='modal-title-div'>contact</div>
         <form
+          method='post'
           name='contact'
           data-netlify='true'
           data-netlify-honeypot='bot-field'
