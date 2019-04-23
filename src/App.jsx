@@ -3,7 +3,7 @@ import './App.css';
 import Home from './Home';
 import Projects from './Projects';
 import BottomBar from './BottomBar';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import CSS3Icon from './icons/CSS3Icon';
 import ResumeIcon from './icons/ResumeIcon';
 import EmailIcon from './icons/EmailIcon';
@@ -302,10 +302,17 @@ class App extends Component {
     const shouldResetIndex = currentImageIndex === 0;
     if (shouldResetIndex === true) {
       index = lastIndex;
-      this.state.currentImageIndex[projectId] = lastIndex;
+      // this.state.currentImageIndex[projectId] = lastIndex;
+      this.setState({
+        [currentImageIndex[projectId]]: lastIndex,
+      });
     } else {
-      this.state.currentImageIndex[projectId] =
-        this.state.currentImageIndex[projectId] - 1;
+      // this.state.currentImageIndex[projectId] =
+      //   this.state.currentImageIndex[projectId] - 1;
+      this.setState({
+        [currentImageIndex[projectId]]:
+          this.state.currentImageIndex[projectId] - 1,
+      });
       index = this.state.currentImageIndex[projectId];
     }
     this.setState({
@@ -322,10 +329,17 @@ class App extends Component {
     const shouldResetIndex = currentImageIndex === lastIndex;
     if (shouldResetIndex === true) {
       index = 0;
-      this.state.currentImageIndex[projectId] = 0;
+      // this.state.currentImageIndex[projectId] = 0;
+      this.setState({
+        [currentImageIndex[projectId]]: 0,
+      });
     } else {
-      this.state.currentImageIndex[projectId] =
-        this.state.currentImageIndex[projectId] + 1;
+      // this.state.currentImageIndex[projectId] =
+      //   this.state.currentImageIndex[projectId] + 1;
+      this.setState({
+        [currentImageIndex[projectId]]:
+          this.state.currentImageIndex[projectId] + 1,
+      });
       index = this.state.currentImageIndex[projectId];
     }
     this.setState({

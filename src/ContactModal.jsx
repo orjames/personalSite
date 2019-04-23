@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import './CloseButton.css';
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
 
 class ContactModal extends Component {
   constructor(props) {
@@ -23,10 +28,16 @@ class ContactModal extends Component {
   handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   render() {
+    const { name, email, message } = this.state;
     return (
       <div className='form-div'>
         <div className='modal-title-div'>contact</div>
-        <form name='contact' data-netlify='true'>
+        <form
+          name='contact'
+          data-netlify='true'
+          data-netlify-honeypot='bot-field'
+          onSubmit={this.handleSubmit}
+        >
           <input type='hidden' name='form-name' value='contact' />
           <div className='input-div'>
             {/* <input
@@ -67,6 +78,7 @@ class ContactModal extends Component {
               className='input'
               placeholder='message...'
             /> */}
+            tst
             <textarea
               name='message'
               className='input'
@@ -76,7 +88,9 @@ class ContactModal extends Component {
             />
           </div>
           <div className='input-div'>
-            <button type='submit' className='btn btn-1 btn-1e' />
+            <button type='submit' className='btn btn-1 btn-1e'>
+              send
+            </button>
           </div>
         </form>
       </div>
