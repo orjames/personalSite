@@ -9,7 +9,6 @@ const encode = (data) => {
 class ContactModal extends Component {
   constructor(props) {
     super(props);
-
     this.state = { name: '', email: '', message: '' };
   }
 
@@ -20,7 +19,8 @@ class ContactModal extends Component {
       body: encode({ 'form-name': 'contact', ...this.state }),
     })
       .then(() => alert('Success!'))
-      .catch((error) => alert(error));
+      .catch((error) => alert(error))
+      .then(this.props.closeModal);
 
     e.preventDefault();
   };

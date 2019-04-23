@@ -17,7 +17,7 @@ const ContactModalClose = (props) => {
           <XIcon width={35} fill={'white'} />
         </div>
         <img src={OwenPhoto} alt='Owen R.' className='modal-image' />
-        <ContactModal />
+        <ContactModal closeModal={props.closeModal} />
       </div>
     </div>
   );
