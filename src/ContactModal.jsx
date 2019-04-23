@@ -40,12 +40,6 @@ class ContactModal extends Component {
         >
           <input type='hidden' name='form-name' value='contact' />
           <div className='input-div'>
-            {/* <input
-              type='text'
-              name='name'
-              className='input'
-              placeholder='name...'
-            /> */}
             <input
               type='text'
               name='name'
@@ -56,12 +50,6 @@ class ContactModal extends Component {
             />
           </div>
           <div className='input-div'>
-            {/* <input
-              type='email'
-              name='email'
-              className='input'
-              placeholder='email...'
-            /> */}
             <input
               type='email'
               name='email'
@@ -72,13 +60,6 @@ class ContactModal extends Component {
             />
           </div>
           <div className='input-div'>
-            {/* <textarea
-              type='text'
-              name='message'
-              className='input'
-              placeholder='message...'
-            /> */}
-            tst
             <textarea
               name='message'
               className='input'
