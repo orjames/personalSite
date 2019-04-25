@@ -23,6 +23,7 @@ import SequelizeIcon from './icons/SequelizeIcon';
 import CloudIcon from './icons/CloudIcon';
 import ExpressIcon from './icons/ExpressIcon';
 import CloseIcon from './icons/CloseIcon';
+import TypeScriptIcon from './icons/TypeScriptIcon';
 
 const projects = [
   {
@@ -78,6 +79,14 @@ const projects = [
     name: 'nextbite',
     imgUrl: 'dogPlaceholder.jpg',
     technologiesUsed: [
+      <div className='skills-div-list-item'>
+        <TypeScriptIcon
+          fill='white'
+          width={40}
+          style={{ background: '' }}
+        />
+        TypeScript
+      </div>
       <div className='project-div-list-item'>
         <NodeJSIcon fill='white' width={40} style={{ background: '' }} />
         Node.js
@@ -85,6 +94,14 @@ const projects = [
       <div className='project-div-list-item'>
         <ExpressIcon fill='white' width={40} style={{ background: '' }} />
         Express.js
+      </div>,
+      <div className='project-div-list-item'>
+        <MongoDBIcon fill='white' width={40} style={{ background: '' }} />{' '}
+        MongoDB
+      </div>,
+      <div className='project-div-list-item'>
+        <MongooseIcon fill='white' width={40} style={{ background: '' }} />
+        Mongoose
       </div>,
       <div className='project-div-list-item'>
         <ReactIcon fill='white' width={40} style={{ background: '' }} />
