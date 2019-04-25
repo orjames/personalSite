@@ -79,14 +79,10 @@ const projects = [
     name: 'nextbite',
     imgUrl: 'dogPlaceholder.jpg',
     technologiesUsed: [
-      <div className='skills-div-list-item'>
-        <TypeScriptIcon
-          fill='white'
-          width={40}
-          style={{ background: '' }}
-        />
+      <div className='project-div-list-item'>
+        <TypeScriptIcon fill='white' width={40} style={{ background: '' }} />
         TypeScript
-      </div>
+      </div>,
       <div className='project-div-list-item'>
         <NodeJSIcon fill='white' width={40} style={{ background: '' }} />
         Node.js
@@ -319,17 +315,17 @@ class App extends Component {
     const shouldResetIndex = currentImageIndex === 0;
     if (shouldResetIndex === true) {
       index = lastIndex;
-      // this.state.currentImageIndex[projectId] = lastIndex;
-      this.setState({
-        [currentImageIndex[projectId]]: lastIndex,
-      });
+      this.state.currentImageIndex[projectId] = lastIndex;
+      // this.setState({
+      //   [currentImageIndex[projectId]]: lastIndex,
+      // });
     } else {
-      // this.state.currentImageIndex[projectId] =
-      //   this.state.currentImageIndex[projectId] - 1;
-      this.setState({
-        [currentImageIndex[projectId]]:
-          this.state.currentImageIndex[projectId] - 1,
-      });
+      this.state.currentImageIndex[projectId] =
+        this.state.currentImageIndex[projectId] - 1;
+      // this.setState({
+      //   [currentImageIndex[projectId]]:
+      //     this.state.currentImageIndex[projectId] - 1,
+      // });
       index = this.state.currentImageIndex[projectId];
     }
     this.setState({
@@ -338,6 +334,7 @@ class App extends Component {
   };
 
   nextSlide = (projectId) => {
+    console.log('nextSlide pressed');
     const images = this.state.images;
     let projectImgs = images[projectId];
     let index = 0;
@@ -346,17 +343,17 @@ class App extends Component {
     const shouldResetIndex = currentImageIndex === lastIndex;
     if (shouldResetIndex === true) {
       index = 0;
-      // this.state.currentImageIndex[projectId] = 0;
-      this.setState({
-        [currentImageIndex[projectId]]: 0,
-      });
+      this.state.currentImageIndex[projectId] = 0;
+      // this.setState({
+      //   [currentImageIndex[projectId]: 0,
+      // });
     } else {
-      // this.state.currentImageIndex[projectId] =
-      //   this.state.currentImageIndex[projectId] + 1;
-      this.setState({
-        [currentImageIndex[projectId]]:
-          this.state.currentImageIndex[projectId] + 1,
-      });
+      this.state.currentImageIndex[projectId] =
+        this.state.currentImageIndex[projectId] + 1;
+      // this.setState({
+      //   [currentImageIndex[projectId]]:
+      //     this.state.currentImageIndex[projectId] + 1,
+      // });
       index = this.state.currentImageIndex[projectId];
     }
     this.setState({
