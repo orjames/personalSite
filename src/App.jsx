@@ -69,7 +69,7 @@ const projects = [
         CSS3
       </div>,
     ],
-    liveLink: 'https://git.heroku.com/nextbite.git',
+    liveLink: 'https://nextbite.herokuapp.com/',
     githubLink: 'https://github.com/orjames/nextbook',
   },
   {
