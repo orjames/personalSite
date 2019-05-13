@@ -1,11 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-interface IGoTProps {}
-
-interface IGoTState {}
-
-class GoT extends React.Component<IGoTProps, IGoTState> {
-  constructor(props: IGoTProps) {
+class GoT extends Component {
+  constructor() {
     super(props);
     this.state = {};
   }
@@ -61,3 +57,5 @@ class GoT extends React.Component<IGoTProps, IGoTState> {
     return <div>{picks}</div>;
   }
 }
+
+export default GoT;
