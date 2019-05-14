@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Home from './Home';
 import Projects from './Projects';
+import GoT from './GoT';
 import BottomBar from './BottomBar';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import CSS3Icon from './icons/CSS3Icon';
@@ -499,7 +500,7 @@ class App extends Component {
             exact
             render={(props) => <Projects projects={projects} {...props} />}
           />
-          <Route path='/GoT/' exact />
+          <Route path='/GoT/' exact render={(props) => <GoT {...props} />} />
         </div>
       </Router>
     );
