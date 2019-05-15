@@ -6,13 +6,6 @@
   font-size: 3em;
 }
 
-html,
-body,
-#app,
-#app > div {
-  width: 100%;
-}
-
 .GoTHome {
   background-color: rgb(3, 11, 18);
   font-family: Raleway-Light;
