@@ -86,8 +86,44 @@
     'a42 b42 c42 d42 e42 f42 g42 h42 i42 j42 k42 l42';
 }
 
+.a00 {
+  grid-area: a00;
+}
+.b00 {
+  grid-area: b00;
+}
+.c00 {
+  grid-area: c00;
+}
+.d00 {
+  grid-area: d00;
+}
+.e00 {
+  grid-area: e00;
+}
+.f00 {
+  grid-area: f00;
+}
+.g00 {
+  grid-area: g00;
+}
+.h00 {
+  grid-area: h00;
+}
+.i00 {
+  grid-area: i00;
+}
+.j00 {
+  grid-area: j00;
+}
+.k00 {
+  grid-area: k00;
+}
+.l00 {
+  grid-area: k00;
+}
 .a0 {
-  grid-area: a0;
+  grid-area: l0;
 }
 .a1 {
   grid-area: a1;
