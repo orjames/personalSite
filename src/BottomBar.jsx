@@ -21,7 +21,7 @@ const BottomBar = (props) => {
           className=''
           style={{ background: '' }}
         />{' '}
-        by Owen R. James (engineer, not designer)
+        by Owen R. James (engineer, not designer){' '}
       </span>
     </div>
   );

@@ -10,6 +10,7 @@ import ResumeCloseButton from './ResumeCloseButton';
 import ContactModalClose from './ContactModalClose';
 import ResumeIcon from './icons/ResumeIcon';
 import EmailIcon from './icons/EmailIcon';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class Home extends Component {
   constructor(props) {
@@ -138,6 +139,9 @@ class Home extends Component {
           {...this.props}
         />
         <Skills />
+        <div className='GoTNav'>
+          <Link to='/GoT'>GoT Pool</Link>
+        </div>
       </div>
     );
   }
