@@ -91,7 +91,7 @@ class GoT extends Component {
     });
 
     return (
-      <div className='home'>
+      <div className='GoTHome'>
         <div className='header'>The GoT Pool</div>
         <div className='scores'>{scoreDisplay}</div>
         <div className='grid'>
