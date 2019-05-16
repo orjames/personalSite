@@ -500,7 +500,7 @@ class App extends Component {
             exact
             render={(props) => <Projects projects={projects} {...props} />}
           />
-          <Route path='/GoT' exact render={(props) => <GoT {...props} />} />
+          <Route path='/GoT' render={(props) => <GoT {...props} />} />
         </div>
       </Router>
     );
