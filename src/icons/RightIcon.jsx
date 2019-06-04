@@ -4,7 +4,7 @@ const RightIcon = ({
   style = {},
   fill = '#fff',
   width = '100%',
-  className = '',
+  className = ''
 }) => (
   <svg
     width={width}

@@ -10,6 +10,8 @@ import ResumeCloseButton from './ResumeCloseButton';
 import ContactModalClose from './ContactModalClose';
 import ResumeIcon from './icons/ResumeIcon';
 import EmailIcon from './icons/EmailIcon';
+import RightIcon from './icons/RightIcon';
+import LeftIcon from './icons/LeftIcon';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class Home extends Component {
@@ -31,7 +33,7 @@ class Home extends Component {
       modal = (
         <div
           className='contact-modal-div'
-          onClick={(e) => this.props.closeModal(e, 'contact-modal-div')}
+          onClick={e => this.props.closeModal(e, 'contact-modal-div')}
         >
           <ContactModalClose
             closeModal={this.props.closeModal}
@@ -117,6 +119,27 @@ class Home extends Component {
                   style={{ padding: '0.5rem 0' }}
                 />
               </a>
+            </div>
+            <div className='home-bio-lower'>
+              Take a look at my most recent App <br />
+              <RightIcon
+                fill='#fff'
+                width={10}
+                className='left-bounce'
+                style={{ marginRight: '0.7rem' }}
+              />
+              <a
+                className='home-link button'
+                href='https://nextbite.herokuapp.com/'
+              >
+                nextbite
+              </a>
+              <LeftIcon
+                fill='#fff'
+                width={10}
+                className='right-bounce'
+                style={{ marginLeft: '0.6rem' }}
+              />
             </div>
             <div className='down-arrow-div'>
               <DownIcon
